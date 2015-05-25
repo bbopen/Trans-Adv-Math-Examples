@@ -1,0 +1,162 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{disprove}{Disprove}
+\title{MATH 303 Week 4 Assignment 2\textsuperscript{nd} Draft}\author{Brett G. Bonner}\date{February 17, 2014}\maketitle
+\linespread{1.5}\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{1} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{2} % same
+%
+\section*{\S 1.6 Exercise \arabic{ProblemCounter}: Prove that}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+There exist integers \(m\) and \(n\) such that \(15m+12n=3\)
+\begin{theorem1}
+There exist integers \(m\) and \(n\) such that \(15m+12n=3\)\\
+Semi-formally, \((\exists m)(\exists n)((m \wedge n)\in \mathbb{Z})(15m+12n=3)\)
+\begin{proof}Let \(m\) and \(n\) be integers.\\
+Let \(m=1\) and \(n=-1\).\\
+With this choice:
+\begin{equation*}
+  15m+12n=
+  15(1)+12(-1)=
+  15-12=
+  3
+\end{equation*}
+Therefore, there exist integers \(m\) and \(n\) such that \(15m+12n=3\).\\
+Because \(1\) and \(-1\) are integers, we proved\\
+\((\exists m)(\exists n)((m \wedge n)\in \mathbb{Z})(15m+12n=3)\)
+\end{proof}
+\end{theorem1}
+\newpage
+
+\addtocounter{SubsectionCounter}{2}
+\section*{\S 1.6 Exercise \arabic{ProblemCounter}: Prove that}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+There do not exist integers \(m\) and \(n\) such that \(12m+15n=1\)
+\begin{theorem2}
+There do not exist integers \(m\) and \(n\) such that \(12m+15n=1\)\\
+Semi-formally, \((\neg\exists m)(\neg\exists n)((m \wedge n)\in \mathbb{Z})(12m+15n=1)\)
+\begin{proof}Suppose there exist two integers \(m\) and \(n\) such that \(12m+15n=1\)\\
+By factoring out 3, we determine:
+\begin{gather*}
+12m+15n=1 \\
+3(4m+5m)=1
+\end{gather*}
+So 3 divides 1. This is a contradiction, because 3 does not divide 1.\\
+Therefore, there can not be integers \(m\) and \(n\) such that \(12m+15n=1\).\\
+We proved by contradiction there do not exist integers \(m\) and \(n\) such that 
+\(12m+15n=1\)
+\end{proof}
+\end{theorem2}
+
+\newpage
+
+\setcounter{ProblemCounter}{2}
+\setcounter{SubsectionCounter}{1}
+\section*{\S 1.6 Exercise \arabic{ProblemCounter}: Prove that for all integers \(a\), \(b\) and \(c\)}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(c\) divides \(a\) and \(c\) divides \(b\), then for all integers \(x\) and \(y\), \(c\) divides \(ax+by\)
+\begin{theorem3}
+If \(c\) divides \(a\) and \(c\) divides \(b\), then for all integers \(x\) and \(y\), \(c\) divides 
+\(ax+by\).\\
+Semi-formally \((\forall a)(\forall b)(\forall c)[(c|a)\wedge(c|b)\Rightarrow(\forall x)(\forall y)((x\wedge y)\in \mathbb{Z})(c|(ax+by))]\)
+\begin{proof}Let \(a, b,\) and \(c\) be arbitrary integers.\\
+Assume \(c\) divides \(a\) and \(c\) divides \(b\), where \(c\neq 0\).\\
+Let \(x\) and \(y\) be arbitrary integers.
+\begin{gather*}
+  a=ck \text{ for some integer } k&\\
+  b=cj \text{ for some integer } j&
+\end{gather*}
+Thus \(ax+by=(ck)x + (cj)y = c(kx+jy)\).\\
+As \(kx+jy\) (a sum of integer products) is an integer, \(ax+by=cz\) for some 
+integer \(z\).\\
+Therefore, we showed that if \(c\) divides \(a\) and \(c\) divides \(b\), then 
+for all integers \(x\) and \(y\), \(c\) divides \(ax+by\). Because \(a, b, c\) 
+were arbitrary, we proved \((\forall a)(\forall b)(\forall c)[(c|a)\wedge(c|b)\Rightarrow(\forall x)(\forall y)((x\wedge y)\in \mathbb{Z})(c|(ax+by))]\)
+\end{proof}
+\end{theorem3}
+
+\newpage
+
+\setcounter{ProblemCounter}{2}
+\setcounter{SubsectionCounter}{5}
+\section*{\S 1.6 Exercise \arabic{ProblemCounter}: Prove that for all integers \(a\), \(b\) and \(c\)}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if there exist integers \(m\) and \(n\) such that \(am+bn=1\) and \(c \neq \pm 
+1\), then \(c\) does not divide \(a\) or \(c\) does not divide \(b\).
+\begin{theorem3}
+If there exist integers \(m\) and \(n\) such that \(am+bn=1\) and \(c \neq \pm 
+1\), then \(c\) does not divide \(a\) or \(c\) does not divide \(b\).\\
+\((\forall a)(\forall b)(\forall c)((a\wedge b \wedge c)\in \mathbb{Z}) \)\\
+\([(\exists m)(\exists n)((m\wedge n)\in \mathbb{Z})(am+bn=1)\wedge(c\neq \pm 1)]\Rightarrow [(c \nmid a)\vee (c \nmid b)] \)
+\begin{proof}
+  We argue by contradiction.\\
+  Suppose \((\exists m)(\exists n)((m\wedge n)\in \mathbb{Z})(am+bn=1)\wedge(c\neq \pm 1)\wedge (c \mid a)\wedge (c \mid b) 
+  \)\\
+  Let \(m, n\) be integers such that \(am+bn=1\)\\
+  Because \(c\) divides \(a\), \(a=ck\) where \(k\) is an integer.\\
+  Because \(c\) divides \(b\), \(b=cj\) where \(j\) is an integer.\\
+  From \(am+bn=1\), we obtain \(ckm+cjn=1\).\\
+  Factoring \(c, c(km+jn)=1.\)\\
+  Because \(km+jn\) is an integer, \(c\) divides 1. So \(c=1\) or \(c=-1\). This is a contradiction, as we assumed \(c \neq \pm 1\).\\
+  Therefore, we showed\\ \([(\exists m)(\exists n)((m\wedge n)\in \mathbb{Z})(am+bn=1)\wedge(c\neq \pm 1)]\Rightarrow [(c \nmid a)\vee (c \nmid b)] 
+  \)\\
+  Because \(a,b,c\) were arbitrary, we proved\\
+  \((\forall a)(\forall b)(\forall c)((a\wedge b \wedge c)\in \mathbb{Z}) \)\\
+\([(\exists m)(\exists n)((m\wedge n)\in \mathbb{Z})(am+bn=1)\wedge(c\neq \pm 1)]\Rightarrow [(c \nmid a)\vee (c \nmid b)] \)
+\end{proof}
+\end{theorem3}
+
+\newpage
+
+\setcounter{ProblemCounter}{4}
+\setcounter{SubsectionCounter}{2}
+\section*{\S 1.6 Exercise \arabic{ProblemCounter}: Provide either a proof or a 
+counterexample for each of these statements.}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\((\forall x)(\exists y)(x+y=0)\)(Universe of all reals)
+\begin{theorem3}
+  For all real numbers \(x\), there exists a real number \(y\) such that 
+  \(x+y=0\).\\
+  \((\forall x)(\exists y)((x \wedge y)\in \mathbb{R})(x+y=0)\)
+\begin{proof}Let \(x\) be an arbitrary real.\\
+For all reals, there exists a real \(y\) such 
+that it is the additive inverse of \(x\), where \(y=-x\).\\
+Therefore, \(x+y=0\).\\
+Because \(x\) is an arbitrary real, we proved that there exists a \(y\) such 
+that \(x+y=0\)\end{proof}
+\end{theorem3}
+
+\setcounter{ProblemCounter}{4}
+\setcounter{SubsectionCounter}{6}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+For all positive numbers \(x, x^2-x \geq 0\)
+\begin{theorem3}
+  For all numbers \(x\), if \(x > 0\), then \(x^2-x \geq 0\).\\
+  \((\forall x)((x > 0)\Rightarrow (x^2-x \geq 0))\)
+\begin{proof}We \textbf{disprove} by counterexample.\\
+Let \(x\) be an arbitrary positive real number.\\
+We solve the inequality \(x^2-x \geq 0\):
+\begin{gather*}
+  x^2-x \geq 0\\ x(x-1)\geq 0\therefore x \geq 1, x \leq 0
+\end{gather*}
+As \(x \geq 1\) or \(x \leq 0\) to satisfy the inequality, the positive range of 
+\(0<x<1\) contradicts the inequality.\\
+For example, let \(x=\frac{1}{2}\)
+\begin{gather*}
+  x^2-x = (\frac{1}{2})^2-\frac{1}{2}=-\frac{1}{4}, \text{which is less than 0}.
+\end{gather*}
+Because we let \(x=\frac{1}{2}, x^2-x \geq 0\) is invalid for all positive real 
+numbers \(x\).\end{proof}
+\end{theorem3}
+\end{document}

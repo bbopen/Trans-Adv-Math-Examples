@@ -1,0 +1,147 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{pgfplots}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}  
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{arrows,positioning,automata,fit,shapes,calc,backgrounds}
+\usepackage{framed}
+\newcommand{\cupdot}{\mathbin{\mathaccent\cdot\cup}}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 14 Assignment 1\textsuperscript{st} Draft}\author{Brett Bonner}\date{April 25, 2014}\maketitle
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\setcounter{ProblemCounter}{3}
+\section*{\S 5.2 Exercise \arabic{ProblemCounter} Prove that the following sets are denumerable}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(3\mathbb{N}\), the 
+positive integer of multiples of \(3\).\\
+Let \(S = \{3, 6, 9, \ldots\}\)\\
+Let \(f:\mathbb{N} \rightarrow S\) be defined by the function \(f{(x)} = 3x\)
+    \begin{enumerate}[(i)]
+      \item Show that \(f:\mathbb{N} \xrightarrow{1-1} S\).\\
+      Let arbitrary \(x,y \in \mathbb{N}\). Suppose \(f{(x)}=f{(y)}\). Then \(3x = 3y\) 
+      implies \(x = y\). Therefore \(f:\mathbb{N} \xrightarrow{1-1} S\)
+      \item Show that \(f:\mathbb{N} \xrightarrow{onto} S\).\\
+     Let an arbitrary \(w \in S\). Let \(t \in \mathbb{N}\) such that \(t = \frac{w}{3}\).\\
+     Then \(f{(t)} = \frac{3w}{3} = w\). Therefore \(f:\mathbb{N} \xrightarrow{onto} S\).
+    \end{enumerate}
+    Because \(f: \mathbb{N} \xrightarrow[onto]{1-1} S\), we conclude \(\mathbb{N} \approx 3\mathbb{N}\) and therefore \(3\mathbb{N}\) is 
+    denumerable.\\
+\newpage
+\setcounter{SubsectionCounter}{5}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(\{x:x \in \mathbb{Z} \text{ and } x < -12\}\).\\
+Let \(S = \{-13,-14,-15,\ldots\}\)\\
+Let \(f:\mathbb{N} \rightarrow S\) be defined by the function \(f{(x)} = -x - 12\)
+    \begin{enumerate}[(i)]
+      \item Show that \(f:\mathbb{N} \xrightarrow{1-1} S\).\\
+      Let \(x,y \in \mathbb{N}\). Suppose \(f{(x)}=f{(y)}\).\\
+      Then \(-x - 12 = -y - 12\) implies \(x = y\). Therefore \(f:\mathbb{N} \xrightarrow{1-1} S\)
+      \item Show that \(f:\mathbb{N} \xrightarrow{onto} S\).\\
+     Let an arbitrary \(w \in S\). Let \(t \in \mathbb{N}\) such that \(t = -w - 12\).\\
+     Then \(f{(t)} = -{(-w - 12)} - 12 = w + 12 - 12 = w\). Therefore \(f:\mathbb{N} \xrightarrow{onto} S\).
+    \end{enumerate}
+    Because \(f: \mathbb{N} \xrightarrow[onto]{1-1} S\), we conclude \(\mathbb{N} \approx S\).\\
+    Therefore \(\{x:x \in \mathbb{Z} \text{ and } x < -12\}\) is 
+    denumerable.\\
+\newpage
+\setcounter{ProblemCounter}{5}
+\section*{\S 5.2 Exercise \arabic{ProblemCounter} State whether each of the following is true or false.}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+countable, then \(A\) is infinite.\\
+False. By definition, a set is countable iff the set is finite or denumerable. A counterexample is the finite set \(A = \{1,2,3\}\).\\
+\addtocounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+denumerable, then \(A\) is countable.\\
+True. By definition, a set is countable iff the set is finite or denumerable.\\
+\addtocounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+finite, then \(A\) is denumerable.\\
+False. A counterexample is the finite set \(A = \{1,2,3\}\), which is not denumerable, since a function \(f:\mathbb{N} \rightarrow \{1,2,3\}\) is not one-to-one\\
+\addtocounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+uncountable, then \(A\) is not denumerable.\\
+True. By definition, a set is uncountable iff it is not countable. A set is 
+countable iff it is finite or denumerable. Therefore if a set is not finite and not denumerable, then the set is uncountable.\\
+\addtocounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+uncountable, then \(A\) is not finite.\\
+True. By similar reasoning of 5.d. By definition, a set is uncountable iff it is not countable. A set is 
+countable iff it is finite or denumerable. Therefore if a set is not finite and not denumerable, then the set is uncountable.\\
+\addtocounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} If a set \(A\) is 
+not denumerable, then \(A\) is uncountable.\\
+False. A set is countable iff it is finite or denumerable. A set may be finite and not denumerable, but remains countable.
+\newpage
+\setcounter{ProblemCounter}{7}
+\section*{\S 5.2 Exercise \arabic{ProblemCounter} Which sets have cardinal number \(\aleph_{0}\)? \(\mathbf{ c }\)?}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \({(5,\infty)}\): \(\mathbf{c}\)
+\begin{theorem1}
+We consider \({(5,\infty)}\) has cardinal number \(\mathbf{c}\).\\
+That is, \({(5,\infty)} \approx {(0,1)}\).
+\begin{proof}
+Let \(S = \{x \in \mathbb{R}: x > 5\}\).\\
+Let \(f: {(0,1)} \rightarrow {(5,\infty)}\) be defined as a function \(f{(x)}=\tan{(\frac{\pi x}{2})} + 5\).
+\begin{enumerate}[(i)]
+  \item Show that \(f:{(0,1)} \xrightarrow{1-1} S\).\\
+  Assume \(f{(x)} = 
+  f{(y)}\).\\
+  Then \(\tan{(\frac{\pi x}{2})} + 5 = \tan{(\frac{\pi y}{2})} + 5\).\\
+  \(\arctan{[\tan{(\frac{\pi x}{2})} = \tan{(\frac{\pi y}{2})}]}\).\\
+  \(\frac{\pi x}{2}=\frac{\pi y}{2}\).\\
+  \(x=y\).\\
+  Therefore \(f:{(0,1)} \xrightarrow{1-1} S\)
+  \item Show that \(f:{(0,1)} \xrightarrow{onto} S\).\\
+  Let \(w \in S\) be arbitrary. Let \(t \in {(0,1)}\) such that \(t = \frac{2 \tan^{-1}{(w - 5)}}{\pi}
+  \).\\
+  Then \(f{(t)} = \tan{(\frac{2\pi\tan^{-1}{(w-5)}}{2\pi})}+5 = w\).\\
+  Therefore \(f:{(0,1)} \xrightarrow{onto} S\).
+\end{enumerate}
+Since \(f:{(0,1)} \xrightarrow[onto]{1-1} S\), \({(0,1)} \approx {(5,\infty)}\), thus \({(5,\infty)}\) has cardinal number \(\mathbf{c}\).
+\end{proof}
+\end{theorem1}
+\newpage
+\setcounter{SubsectionCounter}{4}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(\{2^{x}: x \in 
+\mathbb{N}\}\): \(\aleph_{0}\)
+\begin{theorem1}
+We consider \(\{2^{x}: x \in 
+\mathbb{N}\}\) has cardinal number \(\aleph_{0}\). That is, \(\{2^{x}: x \in 
+\mathbb{N}\}\) is dunerable.
+\begin{proof}
+Let \(S = \{2,4,8,16 \ldots\}\).\\
+Let \(f: \mathbb{N} \rightarrow S\) be defined as a function \(f{(x)}=2^{x}\).
+\begin{enumerate}[(i)]
+  \item Show that \(f:\mathbb{N} \xrightarrow{1-1} S\).\\
+  Assume \(f{(x)} = 
+  f{(y)}\).\\
+  Then \(2^{x} = 2^{y}\).\\ \(\log_{2}2^{x} = \log_{2}2^{y}\).\\ \(x=y\).\\
+  Therefore \(f:\mathbb{N} \xrightarrow{1-1} S\)
+  \item Show that \(f:\mathbb{N} \xrightarrow{onto} S\).\\
+  Let \(w \in S\) be arbitrary. Let \(t \in \mathbb{N}\) such that \(t = 
+  \log_2{w}\).\\
+  Then \(f{(t)} = 2^{\log_{2}w} = w\).\\
+  Therefore \(f:\mathbb{N} \xrightarrow{onto} S\).
+\end{enumerate}
+Since \(f:\mathbb{N} \xrightarrow[onto]{1-1} S\), \(S\) is denumerable and 
+therefore \(\{2^{x}: x \in 
+\mathbb{N}\}\) has cardinal number \(\aleph_{0}\).
+\end{proof}
+\end{theorem1}
+\end{document}

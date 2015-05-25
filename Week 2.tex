@@ -1,0 +1,382 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{setspace}
+\addtolength{\evensidemargin}{-.5in}
+\addtolength{\oddsidemargin}{-.5in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\textheight}{0.8in}
+\addtolength{\topmargin}{-.4in}
+\newtheoremstyle{quest}{\topsep}{\topsep}{}{}{\bfseries}{}{ }{\thmname{#1}\thmnote{ #3}.}
+\theoremstyle{quest}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{question}{Question}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{answer}{Answer}
+\newtheorem*{challengeproblem}{Challenge Problem}
+\newcommand{\name}{%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% put your name here, so we know who to give credit to %%
+Brett Bonner
+}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hw}{%%%%%%%%%%%%%%%%%%%%
+%% and which homework assignment is it? %%%%%%%%%
+%% put the correct number below              %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1.2 and 1.3
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{\vspace{-50pt}
+\Huge \name
+\\\vspace{20pt}
+\normalsize Math 393 Week 2 Homework Draft 2 -- Section \hw}
+\author{}
+\date{}
+\pagestyle{myheadings}
+\markright{\name\hfill Homework \hw\qquad\hfill}
+
+%% If you want to define a new command, you can do it like this:
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+
+%% If you want to use a function like ''sin'' or ''cos'', you can do it like this
+%% (we probably won't have much use for this)
+% \DeclareMathOperator{\sin}{sin}   %% just an example (it's already defined)
+
+\begin{document}
+\maketitle
+\doublespace
+Section 1.2
+\begin{exercise}[1]
+  Identify the antecedent and the consequent for each of the following 
+  conditional sentences. Assume a, b, and f represent some fixed sequence, 
+  integer, or function, respectively.
+\end{exercise}
+\begin{exercise}[1.b]
+  ``If the moon is made of cheese, then 8 is an irrational number.''
+\end{exercise}
+
+\noindent \textbf{P} antecedent: ``The moon is made of cheese'' \\
+\textbf{Q} consequent: ``8 is an irrational number'' \\
+
+\noindent P$\Rightarrow$Q as the antecedent is false, by definition of a conditional 
+sentence, the conditional sentence of problem 1.b is true.
+
+\begin{exercise}[1.c]
+``b divides 3 only if b divides 9'
+\end{exercise}
+
+\noindent \textbf{P} antecedent: ``b divides 3'' \\
+\textbf{Q} consequent: ``8 is an irrational number'' \\
+
+\noindent This is a conditional that is equivalent to ``If P, then Q'' \noindent P$\Rightarrow$Q 
+\\
+
+\noindent \textit{Additional analysis}: if ``b divides 3'' is true, the set of b consists of elements $\{$-3, -1, 1, 3$\}$ as 3 is prime. If b were to somehow not divide 9 if P is true, then the sentence P$\Rightarrow$Q is false. If ``b divides 3'' is false, then the conditional sentence P$\Rightarrow$Q is true.
+
+\newpage
+
+\begin{exercise}[5]
+Which of the following conditional sentences are true?
+\end{exercise}
+\begin{exercise}[5.b]
+  ``If a hexagon has six sides, then the moon is made of cheese.''
+\end{exercise}
+\noindent \textbf{P} antecedent: ``a hexagon has six sides'' \\
+\textbf{Q} consequent: ``the moon is made of cheese'' \\
+\noindent An illustration of a hexagon with numerically labeled sides:
+\\\vspace{1in}
+
+\noindent Elemental analysis of moon soil samples collected from the 1969 Apollo 
+11 mission identify an abundance of silicon and scarcity of calcium relative to 
+analysis of cheeses, which supports evidence to the scientific consensus that the moon is not made of 
+cheese.\\
+
+\noindent By definition, the conditional sentence P$\Rightarrow$Q if and only if P is 
+false or Q is true. The following truth table provides an examination of this
+
+\begin{table}[ht] 
+\centering % used for centering table 
+\begin{tabular}{c c c } % centered columns (3 columns) 
+\hline\hline %inserts double horizontal lines 
+P & Q & P$\Rightarrow$Q \\ [0.5ex] % inserts table 
+%heading 
+\hline % inserts single horizontal line 
+T & T & T \\ % inserting body of the table 
+F & T & T \\
+T & F & F \\
+F & F & T \\ [1ex] % [1ex] adds vertical space 
+\hline %inserts single line 
+\end{tabular} 
+\end{table}
+
+\noindent As P is true yet Q is false, P$\Rightarrow$Q is false. The answer to 5.b is 
+false.
+
+\newpage
+
+\begin{exercise}[5]
+Which of the following conditional sentences are true?
+\end{exercise}
+\begin{exercise}[5.f]
+  ``If Euclid's birthday was April 2, then rectangles have four sides''
+\end{exercise}
+\noindent \textbf{P} antecedent: ``Euclid's birthday was April 2'' \\
+\textbf{Q} consequent: ``rectangles have four sides'' \\
+
+\noindent Euclid may or may not have been born April 2, as little details of Euclid or his life are known by historical scholars\\
+
+\noindent An illustration of a rectangle with numerically labeled sides:
+\\\vspace{1in}
+
+By definition, the truth of a conditional P$\Rightarrow$Q is always true when Q 
+is true. As a rectangle has for sides, Q is true and therefore the conditional 
+statement is true. The answer for 5.f is true.
+
+\newpage
+
+\begin{exercise}[6]
+Which of the following are true?
+\end{exercise}
+\begin{exercise}[6.b]
+  ``7+5=12 iff 1+1=2''
+\end{exercise}
+\noindent \textbf{P}: ``7+5=12'' is true $\forall$ $\mathbb{R}$ \\
+\textbf{Q}: ``1+1=2'' is true $\forall$ $\mathbb{R}$ \\
+P$\Leftrightarrow$Q
+
+Examining the truth table for a biconditional sentence will help assess the 
+answer
+
+\begin{table}[ht] 
+\centering % used for centering table 
+\begin{tabular}{c c c} % centered columns (3 columns) 
+\hline\hline %inserts double horizontal lines 
+P & Q & P$\Leftrightarrow$Q \\ [0.5ex] % inserts table 
+%heading 
+\hline % inserts single horizontal line 
+T & T & T \\ % inserting body of the table 
+F & T & F \\
+T & F & F \\
+T & F & F \\
+F & F & T \\ [1ex] % [1ex] adds vertical space 
+\hline %inserts single line 
+\end{tabular} 
+\end{table}
+
+As P is true and Q is true, P$\Leftrightarrow$Q is true. The answer for 6.b is 
+true.
+
+\begin{exercise}[6.h]
+  `` $\sqrt{10}$ + $\sqrt{13}$ $<$ $\sqrt{11}$ + $\sqrt{12}$ iff $\sqrt{13}$ - $\sqrt{12}$ $<$ $\sqrt{11}$ - $\sqrt{10}$ ''
+\end{exercise}
+\noindent \textbf{P}: `` $\sqrt{10}$ + $\sqrt{13}$ $<$ $\sqrt{11}$ + $\sqrt{12}$ '' is true as $\sqrt{10}$ + $\sqrt{13}$ $\approx$ 6.767, $\sqrt{11}$ + $\sqrt{12}$ $\approx$ 6.780 \\
+\textbf{Q}: `` $\sqrt{13}$ - $\sqrt{12}$ $<$ $\sqrt{11}$ - $\sqrt{10}$ '' is true as $\sqrt{13}$ - $\sqrt{12}$ $\approx$ 0.141, $\sqrt{11}$ - $\sqrt{10}$ $\approx$ 0.154 \\
+P$\Leftrightarrow$Q
+
+As ``iff'' can be inferred as a biconditional connective, P$\Leftrightarrow$Q, 
+the sentence is true as P and Q have the same truth values. The answer for 6.h 
+is true.
+
+\begin{exercise}[6.i]
+  `` $x_2$$\ge$0 iff $x$$\ge$0 (assume $x$ is a fixed real number) '' 
+\end{exercise}
+\noindent \textbf{P}: `` $x_2$$\ge$0 '' is true as the product of any real number and itself is either positive or 0 \\
+\textbf{Q}: `` $x$$\ge$0 '' cannot be assessed as $x$ being a fixed real number could be negative. \\
+As P is always true but Q may be false, P$\Leftrightarrow$Q is false and the 
+answer to 6.i is false.
+
+\newpage
+
+\begin{exercise}[8]
+Prove Theorem 1.2.2 by constructing truth tables for each equivalence
+\end{exercise}
+\begin{exercise}[8.c]
+  ``$\neg$ (P$\Rightarrow$Q) is equivalent to P$\wedge$$\neg$Q''
+\end{exercise}
+
+Examining the truth table will prove the two sentences are equivalent, as their 
+resulting truth values are identical given the same arguments of P, Q
+
+\begin{table}[ht] 
+\centering % used for centering table 
+\begin{tabular}{c c c c c c} % centered columns (3 columns) 
+\hline\hline %inserts double horizontal lines 
+P & Q & $\neg$Q & P$\Rightarrow$Q & $\neg$(P$\Rightarrow$Q) & P$\wedge$$\neg$Q \\ [0.5ex] % inserts table 
+%heading 
+\hline % inserts single horizontal line 
+T & T & F & T & F & F \\ % inserting body of the table 
+T & F & T & F & T & T \\
+F & T & F & T & F & F \\
+F & F & T & T & F & F \\ [1ex] % [1ex] adds vertical space 
+\hline %inserts single line 
+\end{tabular} 
+\end{table}
+
+$\neg$ (P$\Leftarrow$Q) negates the result of ``P$\Leftrightarrow$Q if and only if P is false or Q is true.' 
+Therefore, $\neg$(P$\Rightarrow$Q) is true if and only if P is true and Q is false.\\
+Accordingly, P$\wedge$$\neg$Q is true if and only if P is true and Q is false.
+
+\begin{exercise}[8.d]
+  ``$\neg$(P$\wedge$Q) is equivalent to P$\Rightarrow$$\neg$Q and to Q$\Rightarrow$$\neg$P''
+\end{exercise}
+
+Examining the truth table will prove the three sentences are equivalent, as their 
+resulting truth values are identical given the same arguments of P, Q
+
+\begin{table}[ht] 
+\centering % used for centering table 
+\begin{tabular}{c c c c c c c c} % centered columns (3 columns) 
+\hline\hline %inserts double horizontal lines 
+P & $\neg$P & Q & $\neg$Q & P$\wedge$Q & $\neg$(P$\wedge$Q) & P$\Rightarrow$$\neg$Q & Q$\Rightarrow$$\neg$P\\ [0.5ex] % inserts table 
+%heading 
+\hline % inserts single horizontal line 
+T & F & T & F & T & F & F & F \\ % inserting body of the table 
+T & F & F & T & F & T & T & T \\
+F & T & T & F & F & T & T & T \\
+F & T & F & T & F & T & T & T \\ [1ex] % [1ex] adds vertical space 
+\hline %inserts single line 
+\end{tabular} 
+\end{table}
+
+$\neg$(P$\wedge$Q) negates the result of ``P$\wedge$Q if and only if P and Q are true.' 
+Therefore $\neg$(P$\wedge$Q) is true if P or Q are false.\\
+Accordingly, P$\Rightarrow$$\neg$Q is true if P or Q are false, which is equivalent to Q$\Rightarrow$$\neg$P
+
+\newpage
+
+\begin{exercise}[14]
+  `` Give, if possible, an example of a false conditional sentence for which ''
+\end{exercise}
+\begin{exercise}[14.a]
+  `` The converse is true ''
+\end{exercise}
+
+\noindent \textbf{P$\Rightarrow$Q}: `` If the sum of all interior angles of a shape = $180\,^{\circ}$, then the shape is a triangle \\
+\noindent The converse \textbf{Q$\Rightarrow$P}: `` If a shape is a triangle, then the sum of all interior angles of a shape = $180\,^{\circ}$.
+\begin{exercise}[14.b]
+  `` The converse is false ''
+\end{exercise}
+\noindent It is not possible for the converse of a false statement to be false. A conditional statement is false if and only if the antecedent is true and the consequent is false. In the converse, when the false consequent becomes the antecedent in a new statement, the new statement is true: because a false antecedent is always a true conditional statement.
+
+\begin{exercise}[14.c]
+  `` The contrapositive is false ''
+\end{exercise}
+\noindent \textbf{P$\Rightarrow$Q}: `` If $x$ is a natural number of $\mathbb{N}_1$, then $x^2=0$' is false because 0 is not a natural in $\mathbb{N}_1$ \\
+\noindent The contrapositive \textbf{Q$\Rightarrow$P}: `` If $x^2$$\neq$$0$, then x is not a natural number of $\mathbb{N}_1$ '' can be false as well when $x$$\in$$\mathbb{N}_1$
+
+\begin{exercise}[14.d]
+  `` The contrapositive is true ''
+\end{exercise}
+\noindent If a conditional sentence is false, it is not possible for a contrapositive to be true. Examining the following truth table provides proof: \\ 
+\begin{table}[ht] 
+\centering % used for centering table 
+\begin{tabular}{c c c c c c} % centered columns (3 columns) 
+\hline\hline %inserts double horizontal lines 
+P & $\neg$P & Q & $\neg$Q & P$\Rightarrow$Q & ($\neg$Q)$\Rightarrow$($\neg$P) \\ [0.5ex] % inserts table 
+%heading 
+\hline % inserts single horizontal line 
+T & F & T & F & T & T \\ % inserting body of the table 
+\textbf{T} & \textbf{F} & \textbf{F} & \textbf{T} & \textbf{F} & \textbf{F} \\
+F & T & T & F & T & T \\
+F & T & F & T & T & T \\ [1ex] % [1ex] adds vertical space 
+\hline %inserts single line 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+Section 1.3
+\begin{exercise}[1]
+  `` Translate the following English sentences into symbolic sentences with quantifiers.  ''
+\end{exercise}
+\begin{exercise}[1.c]
+  `` Some isosceles triangles is a right triangle (all triangles) ''
+\end{exercise}
+$(\exists x)$$(x$ is isosceles $\wedge$ $x$ is right)\\
+``There exists a triangle such that the triangle is isosceles and is right.''
+
+\begin{exercise}[1.f]
+  `` Some people are honest and some people are not honest (all people) ''
+\end{exercise}
+$(\exists x)$$(x$ is honest) $\wedge$ $(\exists x)$$(x$ is $\neg$honest) \\
+``There exists a person such that person is honest and there exists a person such that a person is not honest.''
+
+\newpage
+
+\begin{exercise}[7]
+  `` Complete this proof of theorem 1.31 ''
+\end{exercise}
+\begin{exercise}[7.a]
+  `` Let $\mathbb{U}$ be any universe. The sentence ($\exists$$x$)$A(x)$ is true in $\mathbb{U}$\\
+  iff...\\
+  iff ($\forall$$x$)$\not$A$(x)$ is true in $\mathbb{U}$ ''
+\end{exercise}
+Let $\mathbb{U}$ be any universe. If A$(x)$ is an open sentence with variable 
+$x$, then $\neg$($\exists$$x$)A($x$) is equivalent to ($\forall$$x$)$\neg$A($x$) 
+in $\mathbb{U}$ iff ($\exists$$x$)A($x$) is false in $\mathbb{U}$, iff the truth 
+set of $\neg$A($x$) is nonempty and the entire universe of $\mathbb{U}$ and iff 
+($\forall$$x$)$\neg$A($x$) is true in $\mathbb{U}$
+
+\newpage
+
+\begin{exercise}[10]
+  `` Which of the following are true in the universe of real numbers? ''
+\end{exercise}
+\begin{exercise}[10.f]
+  `` ($\exists$$x$) ($\forall$$y$) ($x$$\le$$y$)''
+\end{exercise}
+\noindent ``There exists a real number $x$ such that for all real numbers $y$, 
+$x$$\le$$y$''\\
+\textbf{False}. As set of all real numbers is uncountably infinite and the real line being a linear continuum with no maximum or minimum element, there can not be a $x$ outside of all real numbers $y$ that is less than $y$.
+
+\begin{exercise}[10.g]
+  `` ($\forall$$y$)($\exists$$x$)($x$$\le$$y$)''
+\end{exercise}
+\noindent ``For all real numbers $y$, there exists a real number $x$ such that $x$ is less than or equal to $y$.''\\
+\textbf{True}. $x$ being within the set of all $y$ would mean that given any real number in $y$, there can be an $x$ such that it is equal to or less than $y$.
+
+\newpage
+
+\begin{exercise}[12.a]
+  `` Write the symbolic form for the definition of `f is continuous at a'. ''
+\end{exercise}
+
+\noindent Using the Weierstrass definition of a continuous function. ``For any real number 
+$\epsilon$$\textgreater$0, there exists some number $\delta$$\textgreater$0 such that for all real numbers 
+$x$ with the domain of $f$, if $|$$x-a$$|$ $\textless$ $\delta$ then $|$$f(x)-f(a)$$|$ $\textless$ $\epsilon$ ''\\
+
+($\forall$ $\epsilon$ $\textgreater$ 0) ($\exists$ $\delta$ $\textgreater$ 0) ($\forall$ $x$)[ $(|$$x-a$$|$ $\textless$ $\delta$) $\Rightarrow$ ( $|$$f(x)-f(a)$$|$ $\textless$ $\epsilon$)]
+
+\begin{exercise}[12.d]
+  `` Write a useful denial for 12.a ''
+\end{exercise}
+
+\noindent ``There exists a real number $\epsilon$ $\textgreater$ 0, for any real number $\delta$ $\textgreater$ 0 there 
+exists an $x$ with the domain of $f$, $|$$x-a$$|$ $\textless$ $\delta$ and $|$$f(x)-f(a)$$|$ $\ge$ $\epsilon$ ''\\
+
+($\exists$ $\epsilon$ $\textgreater$ 0) ($\forall$ $\delta$ $\textgreater$ 0) ($\exists$ $x$) [$(|$$x-a$$|$ $\textless$ $\delta$) $\wedge$ ( $|$$f(x)-f(a)$$|$ $\ge$ $\epsilon$)]
+
+
+\newpage
+
+\begin{exercise}[PPT Problem]
+  `` Suppose that A($x$) is an open sentence with variable $x$. Write a statement (similar to the one in (b) of the theorem) to express the fact that there exist exactly two distinct elements that have property 
+  A.''\\
+  \textbf{Theorem 1.3.2 B}:\\ ($\exists$$!$$x$)(A($x$)) is equivalent to 
+  ($\exists$$x$)(A($x$))$\wedge$($\forall$$y$)($\forall$$z$)[A($y$)$\wedge$A($z$)$\Rightarrow$$y=z$]\\
+\end{exercise}
+
+\noindent There exist two numbers $x$ and $y$: ($\exists$$x$) ($\exists$$y$)\\
+with property A: $A(x)$$\wedge$$A(y)$ and \\
+$x$ does not equal $y$: $x$$\neq$$y$ and \\
+and if there is a number $z$ with property A, then it must be $x$ and $y$:\\ 
+$A(z)$$\Rightarrow$[($z=x$)$\wedge$($z=y$)]\\
+($\exists$$x$) ($\exists$$y$) [($A(x)$$\wedge$$A(y)$) $\wedge$ ($x$$\neq$$y$) $\wedge$ [($\forall$$z$)($A(z)$$\Rightarrow$[ ($z=x$)$\wedge$ ($z=y$)]]]
+
+\end{document}

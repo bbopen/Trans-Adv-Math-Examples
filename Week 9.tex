@@ -1,0 +1,258 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}  
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{arrows,positioning,automata,fit,shapes,backgrounds}
+\usepackage{framed}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 9 Assignment 2\textsuperscript{nd} Draft}\author{Brett Bonner}\date{March 8, 2014}\maketitle
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{6} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{3} % same
+%
+\setcounter{ProblemCounter}{1}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Indicate which of the following relations on the given sets are reflexive on agiven set, which are symmetric, and which are transitive.:}
+\setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  \(= \text{ on } \mathbb{N}\)
+\begin{theorem1}
+  \begin{proof}
+\(= \text{ on } \mathbb{N}\) is reflexive, as \({(\forall x \in \mathbb{N}\)})\({(x = x)}\)\\
+\(= \text{ on } \mathbb{N}\) is symmetric, as \({(\forall x, y \in \mathbb{N})}{({(x = y)} \Rightarrow {(y = 
+x)})}\). {(Note: as \(x=y\) is false, the statement is true.)}\\
+\(= \text{ on } \mathbb{N}\) is transitive, as \({(\forall x, y, z \in \mathbb{N})}{({(x = y \wedge y = z)} \Rightarrow {(x = 
+z)})}\). {(Note: as \({(x = y \wedge y = z)}\) is false, the statement is true.)}\
+  \end{proof}
+  \end{theorem1}
+\newpage
+\noindent\setcounter{SubsectionCounter}{7}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+``divides'' on \(\mathbb{N}\) 
+\begin{theorem1}
+  \begin{proof}
+``divides'' on \(\mathbb{N}\) is reflexive, as for all \(x \in \mathbb{N}\), \(x\) 
+divides \(x\), as by definition of ``divides'', there exists a \(k \in \mathbb{N}\) 
+such that \(x = kx\). \(k=1\).\\\\
+``divides'' on \(\mathbb{N}\) is not symmetric. For all \(x \text{ and } y \in \mathbb{N}, {(x \text{ ``divides'' } y)} \Rightarrow {(y \text{ ``divides'' } 
+x)})}\). By definition of ``divides'', there is a \(k \in \mathbb{N}\) such that \(y=xk\). To show that \(y\) ``divides'' \(x\) is false, let \(x = 3\) and \(y = 9\). \(9 = 3{(3)}\), so \(x\) ``divides'' \(y\) is true. As there does not exist a \(k \in \mathbb{N}\) such that \(3 = 9k\), \(y\) does not divide \(x\). Therefore \(x \text{ and } y \in \mathbb{N}, {(x \text{ ``divides'' } y)} \Rightarrow {(y \text{ ``divides'' } 
+x)})}\) is false by counterexample.\\\\
+``divides'' on \(\mathbb{N}\) is transitive. For all \(x, y \text{ and } z \in \mathbb{N}, {(x \text{ ``divides'' } y)} \wedge {(y \text{ ``divides'' } z)} \Rightarrow {(x \text{ ``divides'' } 
+z)})}\). To show \(x\) ``divides'' \(z\), assume \(x\) ``divides'' \(y\) and \(y\) ``divides'' \(z\). Then \(y=xk\) for some \(k \in \mathbb{N}\), and \(z=ym\) for some \(m \in \mathbb{N}\). By substitution, \(z={(xk)}{(m)}\) therefore \(z=x{(km)}\). As \(km \in \mathbb{N}\), \(x\) ``divides'' z is true. It is therefore true for all \(x, y \text{ and } z \in \mathbb{N}, {(x \text{ ``divides'' } y)} \wedge {(y \text{ ``divides'' } z)} \Rightarrow {(x \text{ ``divides'' } 
+z)})}\)\\
+   \end{proof}
+  \end{theorem1}
+\newpage
+  \noindent\setcounter{SubsectionCounter}{8}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(\{{(x,y)} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\}\)
+\begin{theorem1}
+  \begin{proof}
+\(\{{(x,y)} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\}\) is not reflexive, 
+as by counterexample \({(-9,19)}\). \(-9+19=10\), but \({(-9,-9) \notin \mathbb{Z} \times \mathbb{Z}: x + y = 
+10}\)\\\\
+\(\{{(x,y)} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\}\) is symmetric, 
+as addition is communitative, for every \({x,y} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\), there exists \({(y,x)} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\)\\\\
+\(\{{(x,y)} \in \mathbb{Z} \times \mathbb{Z}: x + y = 10\}\) is not transitive, 
+as by counterexample:\\
+(-9,19) \(\in \mathbb{Z} \times \mathbb{Z}: x + y = 10\) 
+and (5,5) \(\in \mathbb{Z} \times \mathbb{Z}: x + y = 10\).\\
+\({(-9,5) \notin \mathbb{Z} \times \mathbb{Z}: x + y = 10}\)
+   \end{proof}
+  \end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{7}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Which of these digraphs represent relations that are (i) reflexive? (ii) symmetric?(iii) transitive?:}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[scale=0.75]{7b.png}
+\label{fig:7b}
+\end{figure}\\
+Reflexive, as there is a loop at every vertex.\\
+Symmetric, as every relation is bidirectional.\\
+Transitive, as every vertex has both a loop and adjacent vertex\\
+\begin{figure}[htbp!]
+\centering
+\includegraphics[scale=0.75]{7d.png}
+\label{fig:7d}
+\end{figure}\\
+Reflexive, as there is a loop at every vertex.\\
+Not symmetric, as not all relations (none, in fact)are bidirectional.\\
+Not transitive. For example, there exists a \(1 R 2\) and \(2 R 3\), but \(1 \cancel{R} 
+3\).
+\newpage
+\setcounter{ProblemCounter}{8}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Determine the equivalence classes for the relation of:}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+congruence modulo 8\\
+\noindent \(\bar{0} = \{\ldots, -16, -8, 0, 8, 16, \ldots\}\)\\
+\(\bar{1} = \{\ldots, -15, -7, 1, 9, 17 \ldots\}\)\\
+\(\bar{2} = \{\ldots, -14, -6, 2, 10, 18 \ldots\}\)\\
+\(\bar{3} = \{\ldots, -13, -5, 3, 11, 19 \ldots\}\)\\
+\(\bar{4} = \{\ldots, -12, -4, 4, 12, 20 \ldots\}\)\\
+\(\bar{5} = \{\ldots, -11, -3, 5, 13, 21 \ldots\}\)\\
+\(\bar{6} = \{\ldots, -10, -2, 6, 14, 22 \ldots\}\)\\
+\(\bar{7} = \{\ldots, -9, -1, 7, 15, 23 \ldots\}\)
+\newpage
+\setcounter{ProblemCounter}{10}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Using the fact that \(\equiv_{m}\) is an equivalence relation on \(\mathbb{Z}\) and without reference to Theorems 3.2.1 and 3.2.3, prove that for all \(x\) and \(y\) in \(\mathbb{Z}\):}
+\setcounter{SubsectionCounter}{5}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(\bar{x} \cap \bar{y} \neq \varnothing, \text{ then } \bar{x} = \bar{y}\)
+\begin{theorem1}
+if \(\bar{x} \cap \bar{y} \neq \empty \varnothing, \text{ then } \bar{x} = 
+\bar{y}\)
+\begin{proof}
+\begin{align*}
+&\Leftrightarrow a \in \bar{x} \cap \bar{y}\\
+&\Leftrightarrow a \in \bar{x} \wedge a \in \bar{y}\\
+&\Leftrightarrow x \equiv_{m}a \; \wedge \;y\equiv_{m}a\\
+&\Leftrightarrow x \equiv_{m}a \; \wedge \; a \equiv_{m}y \Rightarrow x\equiv_{m}y\\
+&\Leftrightarrow \bar{x} \subseteq \bar{y} \text{ and } \bar{y} \subseteq \bar{x}\\
+&\Leftrightarrow x \equiv_{m}w \Rightarrow w 
+\equiv_{m}x\\
+&\Leftrightarrow w \equiv_{m} x \wedge x \equiv_{m} y \Rightarrow w \equiv_{m} y\\
+&\Leftrightarrow w \equiv_{m} y \Rightarrow y \equiv_{m}w \\
+&\Leftrightarrow x \equiv_{m}y \Rightarrow y 
+\equiv_{m}x \\
+&\Leftrightarrow w \equiv_{m}y ;\ \wedge \; y \equiv_{m}x \Rightarrow w \equiv_{m}x\\
+&\Leftrightarrow w \equiv_{m}x \Rightarrow x\equiv_{m}w
+\end{align*}
+\end{proof}
+  \end{theorem1}
+  \newpage
+\setcounter{ProblemCounter}{10}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Using the fact that \(\equiv_{m}\) is an equivalence relation on \(\mathbb{Z}\) and without reference to Theorems 3.2.1 and 3.2.3, prove that for all \(x\) and \(y\) in \(\mathbb{Z}\):}
+\setcounter{SubsectionCounter}{6}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(\bar{x} \cap \bar{y} = \empty \varnothing, \text{ then } \bar{x} \neq 
+\bar{y}\)
+\begin{theorem1}
+if \(\bar{x} \cap \bar{y} = \empty \varnothing, \text{ then } \bar{x} \neq 
+\bar{y}\)
+   \begin{proof}
+Suppose \(\bar{x} = \bar{y}\)\\
+\(\bar{x} \cap \bar{y} = \bar{x} \cap \bar{x} = \bar{x}\).\\
+Since \(x \in \bar{x}, \bar{x} \neq \varnothing\), and since \({\bar{x} = \bar{y}}\), \(\bar{y} \neq \varnothing\) and 
+therefore \(\bar{x} \cap \bar{y} \neq \varnothing\).\\
+By contraposition, if \(\bar{x} \cap \bar{y} = \varnothing\), then \(\bar{x} \neq \bar{y}\)
+     \end{proof}
+  \end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{11}
+\section*{\S 3.2 Exercise \arabic{ProblemCounter}: Consider the relation \(S\) on \(\mathbb{N}\) defined by \(x S y\) iff 3 divides \(x + y\). Prove that \(S\) is not an equivalence relation.}
+\begin{theorem1}
+  \begin{proof}
+Suppose \(S = \{{(x,y)} \in \mathbb{R}: 3 \text{ divides } x+y\}\).\\
+Suppose \(S\) is reflexive, then for all \(x \in S\), \(xSx\).\\
+By definition of ``3 divides x+y'', there is a \(k \in \mathbb{N}\) such that 
+\(x+y=3k\).\\
+Let \(x=1\), then \(xSx\) is (1,1).\\
+There is no such \(k \in \mathbb{N}\) such that \(1+1 = 
+3k\).\\
+Therefore \(xSx\) is not reflexive, and therefore by definition \(S\) is not an 
+equivalence relation.
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{2}
+\section*{\S 3.3 Exercise \arabic{ProblemCounter}: For the given set \(A\), determine whether \(\mathscr{P}\) is a partition of \(A\):}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(A = \{1,2,3,4\}, \mathscr{P} = \{\{1,2\},\{2,3\},\{3,4\}\}\)
+\begin{enumerate}[(i)]
+  \item \(X \in \mathscr{P} \neq \varnothing\).\\
+  \item \({(X \in \mathscr{P})} \wedge {(Y \in \mathscr{P})} \Rightarrow {(X = Y)} \vee {(X \cap Y)} = 
+  \varnothing\)\\
+  Choose \(X = \{1,2\}, Y=\{2,3\}\)\\
+  \(X \cap Y = \{1,2\} \cap \{2,3\} = \{1,3\} \neq \varnothing\)
+\end{enumerate}
+Therefore \(\mathscr{P}\) is not a partition of \(A\).\\
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(A = \{1,2,3,4,5,6,7\}, \mathscr{P} = \{\{1,2\},\{3\},\{4,5\}\}\)
+\begin{enumerate}[(i)]
+  \item \(X \in \mathscr{P} \neq \varnothing\).
+  \item \({(X \in \mathscr{P})} \wedge {(Y \in \mathscr{P})} \Rightarrow {(X = Y)} \vee {(X \cap Y)} = 
+  \varnothing\)\\
+  Choose \(X = \{1,2\}, Y=\{3\}\)\\
+  \(X \cap Y = \{1,2\} \cap \{3\} = \varnothing\) {(repeat until exhaustion of all \(X \text{ and } Y \in \mathscr{P}\))}.
+  \item \(\bigcup\limits_{X \in \mathscr{P}} = A\)\\
+  \(\bigcup\limits_{X \in \mathscr{P}} = \{1,2,3,4,5\} \neq A\)
+\end{enumerate}
+Therefore \(\mathscr{P}\) is not a partition of \(A\).\\
+\newpage
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(A = \{1,2,3,4,5,6,7\}, \mathscr{P} = \{\{1,3\},\{5,6\},\{2,4\},\{7\}\}\)
+\begin{enumerate}[(i)]
+  \item \(X \in \mathscr{P} \neq \varnothing\).
+  \item \({(X \in \mathscr{P})} \wedge {(Y \in \mathscr{P})} \Rightarrow {(X = Y)} \vee {(X \cap Y)} = 
+  \varnothing\)\\
+  Choose \(X = \{1,3\}, Y=\{5,6\}\)\\
+  \(X \cap Y = \{1,3\} \cap \{5,6\} = \varnothing\) {(repeat until exhaustion of all \(X \text{ and } Y \in \mathscr{P}\))}.
+  \item \(\bigcup\limits_{X \in \mathscr{P}} = A\)\\
+  \(\bigcup\limits_{X \in \mathscr{P}} = \{1,2,3,4,5,6,7\} \neq A\)
+\end{enumerate}
+Therefore \(\mathscr{P}\) is a partition of \(A\).
+\newpage
+\setcounter{ProblemCounter}{8}
+\section*{\S 3.3 Exercise \arabic{ProblemCounter}: List the ordered pairs in the equivalence relation on \(A = \{1,2,3,4,5\}\) associatedwith these partitions:}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\{\{1\},\{2\},\{3,4\},\{5\}\}\\
+Reflexive: \{{(1,1)},{(2,2)},{(3,3)},{(4,4)},{(5,5)}\}\\
+\{{(3,4)},{(4,3)}\}\\
+Answer: \{{(1,1)},{(2,2)},{(3,3)},{(3,4)},{(4,3)},{(4,4)},{(5,5)}\}\\
+\setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\{\{2,3,4,5\},\{1\}\}\\
+Reflexive: \{{(1,1)},{(2,2)},{(3,3)},{(4,4)},{(5,5)}\}\\
+\{{(2,3)},{(2,4)},{(2,5)},{(3,2)},{(3,4),{(3,5)},{(4,2)},{(4,3)},{(4,5)},{(5,2)},{(5,3)},{(5,4)}}\}\\
+Answer:\\
+\{{(1,1)},{(2,2)},{(3,3)},{(4,4)},{(5,5)},{(2,3)},{(2,4)},{(2,5)},{(3,2)},{(3,4),{(3,5)},{(4,2)},{(4,3)},{(4,5)},{(5,2)},\ldots\\\ldots{(5,3)},{(5,4)}}\}
+\newpage
+\setcounter{ProblemCounter}{10}
+\section*{\S 3.3 Exercise \arabic{ProblemCounter}: Complete the proof of Theorem 3.3.2 by proving that if \(\mathscr{P}\) is a partition of \(A\), and \(x Q y\) iff there exists \(C \in \mathscr{P}\) such that \(x \in C\) and \(y \in C\) then \bf{(a)} \(Q\) is symmetric. \bf{(b)} \(Q\) is reflexive on \(A\):}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  \(Q\) is symmetric
+  \begin{proof}
+    Let \(x,y \in A\).\\
+    Assume that \(x Q y\).\\
+    By definition, there exists a \(C \in \mathscr{P}\) such that \(y \in C\) 
+    and \(x \in C\).\\
+    Therefore \(y Q x\), \(Q\) is symmetric
+  \end{proof}
+\end{theorem1}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  \(Q\) is reflexive on \(A\)
+  \begin{proof}
+    Let \(x \in A\).\\
+    Assume that \(x Q x\).\\
+    By definition, there exists a \(C \in \mathscr{P}\) such that \(x \in C\).\\
+    Therefore \(x Q x\), \(Q\) is reflexive on \(A\)
+  \end{proof}
+\end{theorem1}
+\end{document}

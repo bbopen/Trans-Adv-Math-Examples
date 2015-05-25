@@ -1,0 +1,297 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\title{MATH 303 Week 3 Assignment 2\textsuperscript{nd} Draft}\author{Brett G. Bonner}\date{February 10, 2014}\maketitle
+\linespread{1.5}\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{6} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{1} % same
+%
+\section*{\S 1.4 Exercise \arabic{ProblemCounter}: Let \( a\) and \( b \) be real numbers. Prove that}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\( |ab| = |a||b|\)
+\begin{theorem1}
+\( |ab| = |a||b|\)
+\begin{proof}Let \(a\) and \(b\) be real numbers. Suppose for any real number \(x\), the 
+absolute value of x, \(|x|\), is a piecewise function defined as:
+\begin{align}
+  \label{quad}
+     |x| = \left\{
+     \begin{array}{lr}
+       -x, & x < 0\\
+        x, & x \geq 0
+     \end{array}
+   \right.
+\end{align}
+For \(a\) and \(b\), we show that \(|ab| = |a||b|\) for all four possible 
+cases:\\ \\
+\text{\underline{Case 1:} }\(a \geq 0 \text{, and } b \geq 0\)
+\begin{gather*}
+\label{case1}
+|a| = a \text{, and } |b|=b\\
+\text{As \(a \geq 0\) and \(b \geq 0\), \(ab \geq 0 \therefore |ab|=ab\)}\\
+\text{As }
+|ab| = ab\\
+ab=(a)(b)\\
+(a)(b)=|a||b|
+\end{gather*}
+
+\noindent\text{\underline{Case 2:} }\(a \geq 0 \text{, and } b < 0\)
+\begin{gather*}
+\label{case2}
+|a| = a \text{, and } |b|=-b\\
+\text{As \(a \geq 0\) and \(b < 0\), \(ab \leq 0\).}\\
+\text{As } ab \leq 0, |ab|=-ab\\
+|ab|= -ab\\
+-ab = (a)(-b)\\
+(a)(-b) = |a||b|
+\end{gather*}
+
+\noindent\text{\underline{Case 3:} }\(a < 0 \text{, and } b \geq 0\)
+\begin{gather*}
+\label{case3}
+|a| = -a \text{, and } |b|=b\\
+\text{As \(a < 0\) and \(b \geq 0\), \(ab \leq 0\).}\\
+\text{As } ab \leq 0, |ab|=-ab\\
+|ab|= -ab\\
+-ab = (-a)(b)\\
+(-a)(b) = |a||b|
+\end{gather*}
+
+\noindent\text{\underline{Case 4:} }\(a < 0 \text{, and } b < 0\)
+\begin{gather*}
+\label{case4}
+|a| = -a \text{, and } |b|=-b\\
+\text{As \(a < 0\) and \(b < 0\), \(ab > 0\).}\\
+\text{As } ab > 0, |ab|=ab\\
+|ab|= ab\\
+ab = (a)(b)\\
+(a)(b) = |a||b|
+\end{gather*}
+Therefore, \(|ab|=|a||b|\) for all possible cases.\\
+We proved if \(a\) and \(b\) are real numbers, then \(|ab|=|a||b|\)
+\end{proof}
+\end{theorem1}
+\newpage
+
+\addtocounter{SubsectionCounter}{2}
+\section*{\S 1.4 Exercise \arabic{ProblemCounter}: Let \( a\) and \( b \) be real numbers. Prove that}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(|\frac{a}{b}| = \frac{|a|}{|b|}\), for \(b \neq 0\)
+
+\begin{theorem2}
+\(|\frac{a}{b}| = \frac{|a|}{|b|}\), for \(b \neq 0\)
+\begin{proof}Let \(a\) and \(b\) be real numbers. Suppose for any real number \(x\), the 
+absolute value of x, \(|x|\), is a piecewise function defined as:
+\begin{align}
+  \label{quad}
+     |x| = \left\{
+     \begin{array}{lr}
+       -x, & x < 0\\
+        x, & x \geq 0
+     \end{array}
+   \right.
+\end{align}
+For \(a\) and \(b\), we show that \(|\frac{a}{b}| = \frac{|a|}{|b|}\), for \(b \neq 0\) for all four possible 
+cases:\\ \\
+\text{\underline{Case 1:} }\(a \geq 0 \text{, and } b > 0\)
+\begin{gather*}
+\label{case1}
+|a| = a \text{, and } |b|=b\\
+\text{As } a \geq 0 \text{ and } b > 0, \frac{a}{b} \geq 0 \therefore \abs*{\frac{a}{b}} = 
+\frac{a}{b}\\
+\text{As } \abs*{\frac{a}{b}} = \frac{a}{b} = a \times \frac{1}{b} = \abs*{a}\times\frac{1}{\abs{b}} = \frac{\abs{a}}{\abs{b}}
+\end{gather*}
+
+\noindent \text{\underline{Case 2:} }\(a < 0 \text{, and } b > 0\)
+\begin{gather*}
+\label{case2}
+|a| = -a \text{, and } |b|=b\\
+\text{As } a < 0 \text{ and } b > 0, \frac{a}{b} < 0 \therefore \abs*{\frac{a}{b}} = -\frac{a}{b}\\
+\text{As } \abs*{\frac{a}{b}} = -\frac{a}{b} = (-a) \times \frac{1}{b} = \abs*{a}\times\frac{1}{\abs{b}} = \frac{\abs{a}}{\abs{b}}
+\end{gather*}
+
+\noindent\text{\underline{Case 3:} }\(a \geq 0 \text{, and } b < 0\)
+\begin{gather*}
+\label{case3}
+|a| = a \text{, and } |b|=-b\\
+\text{As } a \geq 0 \text{ and } b < 0, \frac{a}{b} \leq 0 \therefore \abs*{\frac{a}{b}} = -\frac{a}{b}\\
+\text{As } \abs*{\frac{a}{b}} = -\frac{a}{b} = (a) \times \frac{1}{-b} = \abs*{a}\times\frac{1}{\abs{b}} = \frac{\abs{a}}{\abs{b}}
+\end{gather*}
+
+\noindent\text{\underline{Case 4:} }\(a < 0 \text{, and } b < 0\)
+\begin{gather*}
+\label{case4}
+|a| = -a \text{, and } |b|=-b\\
+\text{As } a < 0 \text{ and } b < 0, \frac{a}{b} > 0 \therefore \abs*{\frac{a}{b}} = \frac{a}{b}\\
+\text{As } \abs*{\frac{a}{b}} = \frac{a}{b} = (a) \times \frac{1}{b} = \abs*{a}\times\frac{1}{\abs{b}} = \frac{\abs{a}}{\abs{b}}
+\end{gather*}
+Therefore, \(\abs*{\frac{a}{b}}=\frac{\abs*{a}}{\abs*{b}}\) for \(b \neq 0\) for all possible cases.\\
+We proved if \(a\) and \(b\) are real numbers, then \(\abs*{\frac{a}{b}}=\frac{\abs*{a}}{\abs*{b}}\) for \(b \neq 0\)
+\end{proof}
+\end{theorem2}
+
+\newpage
+\addtocounter{ProblemCounter}{1}
+\addtocounter{SubsectionCounter}{5}
+\section*{\S 1.4 Exercise \arabic{ProblemCounter}: Suppose \( a\), \( b\), \(c\), and \(d\) are integers. Prove that}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(a\) divides \(b\), then \(a\) divides \(bc\)
+
+\begin{theorem3}
+If \(a\) divides \(b\), then \(a\) divides \(bc\)
+\begin{proof}Let \(a\), \(b\), and \(c\) be integers.\\
+We define ``divides'' as the condition where if the ratio of some integers \(x\) and \(y\) is an integer \(z\), then \(y\) is said to divide \(x\).\\
+Assume \(a\) divides \(b\).\\
+By definition, there exists an integer \(k\) such that \(b=ak\).\\
+Therefore, \(bc = (ak)c = a(kc)\), where \(a\) divides \(bc\).\\
+We proved if \(a\) divides \(b\), then \(a\) divides \(bc\).
+\end{proof}
+\end{theorem3}
+
+\vspace{\baselineskip}
+\addtocounter{SubsectionCounter}{3}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(a\) divides \(b\) and \(c\) divides \(d\), then \(ac\) divides \(bd\)
+
+\begin{theorem4}
+If \(a\) divides \(b\) and \(c\) divides \(d\), then \(ac\) divides \(bd\).
+\begin{proof}Let \(a\), \(b\), \(c\), and \(d\) be integers.\\
+We define ``divides'' as the condition where if the ratio of some integers \(x\) and \(y\) is an integer \(z\), then \(y\) is said to divide \(x\).\\
+Assume \(a\) divides \(b\) and \(c\) divides \(d\).\\
+By definition, there exists integers \(k\) and \(m\) such that \(b=ak\) and \(d=cm\).\\
+\(bd = (ak)(cm) = (ac)(km)\)\\
+Therefore, \(ac\) divides \(bd\).\\
+We proved if \(a\) divides \(b\) and \(c\) divides \(d\), then \(ac\) divides \(bd\).
+\end{proof}
+\end{theorem4}
+\newpage
+
+\setcounter{ProblemCounter}{3}
+\setcounter{SubsectionCounter}{3}
+\section*{\S 1.5 Exercise \arabic{ProblemCounter}: Let \( x\), \( y\), and \(z\) be integers. Write a proof by contraposition to show that }
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(x^2\) is not divisible by 4, then \(x\) is odd.
+
+\begin{theorem5}
+If \(x^2\) is not divisible by 4, then \(x\) is odd for all integers \(x\).
+\begin{proof}Let \(x\) be an integer, and assume \(x\) is not odd.\\
+As \(x\) is not odd, the parity of \(x\) is even.\\
+`Even' is defined as an integer of the form \(n = 2k\), where \(k\) is an 
+integer and \(n\) is an integer.\\
+As \(x\) is even, \(x=2y\) for an integer \(y\)
+\begin{gather*}
+x^2 = {(2y)}^2 = 4y^2
+\end{gather*}
+By definition, \(4\) divides \(x^2\) thus if \(x\) is not odd, then \(x^2\) is 
+divisible by \(4\).\\
+Therefore, if \(x^2\) is not divisible by \(4\), then \(x\) is odd.\\
+By contraposition, it is proved that if \(x^2\) is not divisible by \(4\), then \(x\) 
+is odd.
+\end{proof}
+\end{theorem5}
+\setcounter{SubsectionCounter}{3}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+if \(xy\) is even, then \(x\) or \(y\) is even.
+
+\begin{theorem6}
+If \(xy\) is even, then \(x\) or \(y\) is even.
+\begin{proof}Let \(x\) and \(y\) be integers, and assume neither \(x\) nor \(y\) is even.
+As neither \(x\) nor \(y\) are even, \(x\) and \(y\) are odd.
+`Odd' is defined as an integer of the form \(n = 2k+1\), where \(k\) is an 
+integer and \(n\) is an integer.
+As \(x\) and \(y\) are odd, \(x=2m+1\) and \(y=2p+1\), where \(m\) and \(p\) are 
+integers.
+\begin{equation*}
+xy=(2m+1)(2p+1)=4mp+2p+2m+1=2{(2mp+p+m)}+1
+\end{equation*}
+Let an integer \(z=2mp+p+m\), therefore \(2z+1=xy\), proving the product of 
+\(x\) and \(y\) is odd. Therefore if \(xy\) is even, \(x\) or \(y\) is even.\\
+We proved by contraposition that if \(xy\) is even, then either \(x\) or \(y\) 
+is even.
+\end{proof}
+\end{theorem6}
+
+\newpage
+\setcounter{ProblemCounter}{5}
+\section*{\S 1.5 Exercise \arabic{ProblemCounter}: A circle has center {(2,4)}.}
+\setcounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Prove that {(-1,5)} and {(5,1)} are not both on the same circle.
+\begin{theorem6}
+  If a circle has center {(2,4)}, {(-1,5)} and {(5,1)} are not both on the circle.
+  \begin{proof}
+    Assume {(-1,5)} and {(5,1)} are both on the circle with center {(2,4)}. A circle 
+    with radius \(r\) and center \((a,b)\) is the set of all points \((x,y)\) 
+    such that \({(x-a)}^2+{(y-b)}^2=r^2\).\\
+\noindent\text{\underline{Case 1:} the radius of the circle with center {(2,4)} and point on circle 
+(-1,5)}
+\begin{multline*}
+\label{Ex5case1}
+r^2={(-1-2)}^2+{(5-4)}^2\\
+=9+1\\
+=10
+\end{multline*}
+\noindent\text{\underline{Case 2:} the radius of the circle with center (2,4) and point on circle 
+(5,1)}
+\begin{multline*}
+r^2={(5-2)}^2+{(1-4)}^2\\
+=9+9\\
+=18
+\end{multline*}  
+As {(-1,5)} and {(5,1)} is on the same circle, the radius \(r\) from the center to 
+each point should be equal. As the radius in case 1 is not equivalent with the radius in case 2, 
+there is a contradiction. Therefore, {(-1,5)} and {(5,1)} are not both on a circle 
+with center (2,4).
+\end{proof}
+\end{theorem6}
+\newpage
+\section*{\S 1.5 Exercise \arabic{ProblemCounter}: A circle has center {(2,4)}.}
+\setcounter{SubsectionCounter}{2}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+ Prove that if the radius is less than 5, then the circle does not intersect the line 
+\(y=x-6\).
+
+\begin{theorem8}
+If a circle with center {(2,4)} has a radius less than 5, then the circle does not 
+intersect with the line \(y=x-6\).
+\begin{proof}Assume a circle intersects with the line \(y=x-6\) and the circle has radius \(r < 
+5\).\\
+Let the point {(a,b)} be a point of intersection of the line and circle, then 
+\(b=a-6\).\\
+A circle with radius \(<\) 5, center (2,4), and point (a,b) is written:
+\begin{multline*}
+  {(a-2)}^2 + {(b-4)}^2 < 5^2\\
+  [{(a-2)}^2 + {(b-4)}^2 < 5^2] = [{(a-2)}^2 + {(a-6-4)}^2 < 25] =\\
+  {(2a^2 - 24a + 104 < 25)} = {(2a^2 - 24a + 79 < 0)}
+\end{multline*}
+To determine if the quadratic inequality \(2a^2 - 24a + 79 < 0\) has a solution, the 
+discriminant (\(\Delta\)) of the quadratic equation is evaluated:
+\begin{equation*}
+  \Delta = -24^2 - 4(2)(79) = -56
+\end{equation*}
+As \(\Delta < 0\), by definition of the discriminant, the quadratic equation 
+\[2a^2 - 24a + 79 = 0\] has no real-number solutions, meaning the expression \[2a^2 - 24a + 79\] is either \textit{always} positive or \textit{always} negative. Testing with \(a=0\) will determine if the solution is either positive or negative:\\
+\begin{multline*}
+  2{(0)}^2-24{(0)}+79\\
+  =0+0+79\\
+  =79
+\end{multline*}
+As testing with \(a=0\) indicates the quadratic expression is positive, a contradiction exists with the equation of the circle intersecting with line \(y=x-6\) at point (a,b), expressed by \(2a^2 - 24a + 79 < 0\), which indicates the solution to the expression should be negative.\\
+Therefore, a contradiction exists where the circle can not have a radius less than 5 \textit{and} intersect with the line \(y=x-6\).\\
+It is proved by contradiction that if a circle with center {(2,4)} has a radius 
+less than 5, then the circle does not intersect with the line \(y=x-6\)
+\end{proof}
+\end{theorem8}
+
+
+\end{document}

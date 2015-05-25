@@ -1,0 +1,231 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}  
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{arrows,positioning,automata,fit,shapes,backgrounds}
+\usepackage{framed}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 10 Assignment 2\textsuperscript{nd} Draft}\author{Brett Bonner}\date{March 28, 2014}\maketitle
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{6} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{3} % same
+%
+\setcounter{ProblemCounter}{2}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Let \(A=\{a,b,c\}\). Give an example of a relation on \(A\) that is:}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  antisymmetric and symmetric\\
+  Let \(R = \{{(a,a),{(b,b)},{(c,c)}}\}\)\\
+  \textit{Antisymmetric}, because for all \(x,y \in A\), \(xRy\) and \(yRx\) implies \(x=y\). This holds true as \(R\) is clearly an equivalence relation, \(a=a, b=b, c=c\)\\
+  \textit{Symmetric}, because for all \(x\) and \(y\) \(\in A\), \(xRy\) and \(yRx\).\\ It is clear \(aRa \wedge aRa, bRb \wedge bRb, cRc \wedge cRc\).\\
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  antisymmetric, reflexive on \(A\), and not symmetric\\
+  Let \(R = \{{(a,a),(b,b),(c,c),(a,b),{(b,c)},{(a,c)}}\}\)\\
+  \textit{Reflexive}, because for all \(x \in A, xRx\)\\
+  \textit{Not symmetric}, because for all \(x\) and \(y\) \(\in A\), there exists an \(xRy\) but \(y\cancel{R}x\). In this case, the pair {(a,b)} exists but not {(b,a)}.\\
+  \textit{Antisymetric}, because for all \(x,y \in A\), if \(xRy\) and \(y R x\), \(x=y\). In this case, {(a,b)} exists, but (b,a) does not exist. Therefore as \(y \cancel{R} x\) for all \(x,y \in A\), the antecedent is false and thus the statement is 
+  true.\\
+\newpage
+  \setcounter{SubsectionCounter}{3}
+  \noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  antisymmetric, not reflexive on \(A\), and not symmetric\\
+     Let \(R = \{{(a,b),{(b,c)},{(a,c)}}\}\)\\
+     \textit{Not reflexive}, because for all \(x \in A, x \cancel{R} x\). For example, {(a,a)} does not exist.\\
+\textit{Antisymetric}, because for all \(x,y \in A\), if \(xRy\) and \(y R x\), \(x=y\). In this case, {(a,b)} exists, but (b,a) does not exist. Therefore as \(y \cancel{R} x\) for all \(x,y \in A\), the antecedent is false and thus the statement is 
+true.\\
+  \textit{Not symmetric}, because for all \(x\) and \(y\) \(\in A\), there exists an \(xRy\) but \(y\cancel{R}x\). In this case, the pair {(a,b)} exists but not 
+  {(b,a)}\\
+  \setcounter{SubsectionCounter}{4}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  symmetric and not antisymmetric\\
+     Let \(R = \{{(a,b),{(b,a)}, {(a,c)}, {(c,a)}, {(b,c)}, {(c,b)}\}\)\\
+     Establish \(R\) is \textit{not reflexive}, because for all \(x \in A, x \cancel{R} x\). For example, {(a,a)} does not exist.\\
+         \(R\) is \textit{Symmetric}, because for all \(x\) and \(y\) \(\in A\), there exists an \(xRy\) but \(y\cancel{R}x\). In this case, the pairs {(a,b)} and {(b,a)} 
+  exists, the pairs {(a,c)} and {(c,a)} exist, the pairs {(b,c)} and {(c,b)} 
+  exist.\\
+\(R\) is \textit{not antisymetric}. \(R\) is antisymmetric iff for all \(x,y \in A\) if \(xRy\) and \(y R x\), \(x=y\). In this case, {(a,b)} exists and {(b,a)} exists, but it is not the case that \(a = b\). This is because \(a \neq b\) as set elements must be distinct. As the antecedent of our antisymmetric definition is true, but the consequent is false, the statement that  
+\(R\) is antisymmetric is therefore false. Thus \(R\) is not antisymmetric.\\
+\newpage
+  \setcounter{SubsectionCounter}{5}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+  not symmetric and not antisymmetric\\
+     Let \(R = \{{(a,b),{(b,a)},{(a,c)}}\}\)\\
+     \textit{Not reflexive}, because for all \(x \in A, x \cancel{R} x\). For example, {(a,a)} does not exist.\\
+    \textit{Not symmetric}, because for all \(x\) and \(y\) \(\in A\), there exists an \(xRy\) but \(y\cancel{R}x\) for all \(x,y \in A\). In this case, the pair {(a,c)} exists but not 
+  {(c,a)}\\
+\(R\) is \textit{not antisymetric}. \(R\) is antisymmetric iff for all \(x,y \in A\) if \(xRy\) and \(y R x\), \(x=y\). In this case, {(a,b)} exists and {(b,a)} exists, but it is not the case that \(a = b\). This is because \(a \neq b\) as set elements must be distinct. As the antecedent of our antisymmetric definition is true, but the consequent is false, the statement that  
+\(R\) is antisymmetric is therefore false. Thus \(R\) is not antisymmetric.\\
+\newpage
+\setcounter{ProblemCounter}{11}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Use your own judgment about which tasks should precede others to draw a Hassediagram for the partial order among the tasks for each of the following projects. :}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+To back a car out of the garage, Kim must perform 11 tasks:\\\(t_1\): put the key in the ignition,\(t_2\): step on the gas,\(t_3\): check to see if the driveway is clear,\(t_4\): start the car,\(t_5\): adjust the mirror,\(t_6\): open the garage door,\(t_7\): fasten the seat belt,\(t_8\): adjust the position of the driver’s seat,\(t_9\): get in the car,\(t_{10}\): put the car in reverse gear,\(t_{11}\): step on the brake\\
+\begin{tikzpicture}[scale=.7]
+  \node (t_1) at (0,0) {$t_1$};
+  \node (t_2) at (0,10) {$t_2$};
+  \node (t_3) at (0,6) {$t_3$};
+  \node (t_4) at (0,4) {$t_4$};
+  \node (t_5) at (3,0) {$t_5$};
+  \node (t_6) at (0,-6) {$t_6$ {(manually opened)}};
+  \node (t_7) at (-3,0) {$t_7$};
+  \node (t_8) at (0,-4) {$t_8$ {(I adjust before entering)}};
+  \node (t_9) at (0,-2) {$t_9$};
+  \node (t_10) at (0,8) {$t_{10}$};
+  \node (t_11) at (0,2) {$t_{11}$};
+  \draw (t_6) -- (t_8) -- (t_9) -- (t_5) -- (t_9) -- (t_1) -- (t_9) -- (t_5) -- (t_9) -- (t_7) -- (t_11) -- (t_1) -- (t_11) -- (t_5) -- (t_11) -- (t_4) -- (t_3) -- (t_10) -- (t_2);
+\end{tikzpicture}\\
+\newpage
+\setcounter{ProblemCounter}{14}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Let \(A\) be a set and \(\subseteq\) be the ordering for \(\mathscr{P}{(A)}\)}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} Let \(C\) and \(D\) be 
+subsets of \(A\). Prove that the least upper bound of \(\{C, D\}\) is \(C \cup D\) and the 
+greatest lower bound of \(\{C, D\}\) is \(C \cap D\).
+\begin{theorem1}
+  If \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(C\) and \(D\) are subsets of \(A\), then the least upper-bound 
+  of \(\{C,D\}\) is \(C \cup D\) and the greatest lower bound of \(\{C,D\}\) is \(C \cap 
+  D\).
+  \begin{proof}
+    Suppose an arbitrary \(A\) is a set and \(C\) and \(D\) are subsets of \(A\).\\
+    Then \(\{C,D\} \subseteq \mathscr{P}{(A)}\).\\
+    \(C \cup D\) is the least upper bound for \(\{C,D\}\) iff:
+    \begin{enumerate}[(i)]
+      \item \(C \cup D\) is an upper bound for \(\{C,D\}\).\\
+      Let an arbitrary \(X \in \{C,D\}\). \(C \cup D\) is an upper bound for \(\{C,D\}\) iff \(X \subseteq C \cup D\) for every \(X \in \{C,D\}\). By theorem 2.2.1a, \(C \subseteq C \cup D\) 
+      and \(D \subseteq C \cup D\). Therefore by definition, as an \(X \in \{C,D\}\), \(C \cup D\) is an upper bound for 
+      \(\{C,D\}\).
+      \item \(C \cup D \subseteq Y\) for every upper bound \(Y\) for 
+      \(\{C,D\}\).\\
+      Let an arbitrary \(Y\) be an upper bound for \(\{C,D\}\). By definition of an 
+      upper bound, \(Y\) is an upper bound for \{C,D\} iff \(X \subseteq Y\) for every \(X \in \{C,D\}\). 
+      Therefore, \(C \subseteq Y\) and \(D \subseteq Y\). Therefore \(C \cup D \subseteq 
+      Y\). Therefore as an arbitrary \(Y\) is an upper bound for \(\{C,D\}\), \(C \cup D \subseteq Y\) 
+      for every upper bound \(Y\) for \(\{C,D\}\).
+    \end{enumerate}
+    Therefore if \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(C\) and \(D\) are subsets of \(A\), then the least upper-bound 
+  of \(\{C,D\}\) is \(C \cup D\).
+  We now show that the greatest lower bound of \(\{C,D\}\) is \(C \cap 
+  D\).
+  \newpage
+      \noindent\(C \cap D\) is the greatest lower bound for \(\{C,D\}\) iff:
+    \begin{enumerate}[(i)]
+      \item \(C \cap D\) is an lower bound for \(\{C,D\}\).\\
+      Let an arbitrary \(X \in \{C,D\}\). \(C \cap D\) is a lower bound for \(\{C,D\}\) iff \(C \cap D \subseteq X\) for every \(X \in \{C,D\}\). By theorem 2.2.1b, \(C \cap D \subseteq C\) and \(C \cap D \subseteq D\) hold for all sets \(C\) and \(D\). 
+      Therefore by definition, as \(X \in \{C,D\}, C \cap D\) is a lower bound 
+      for \(\{C,D\}\).
+      \item \(Y \subseteq C \cap D\) for every lower bound \(Y\) for 
+      \(\{C,D\}\).\\
+      Let an arbitrary \(Y\) be a lower bound for \(\{C,D\}\). By definition of a 
+      lower bound, Y is an lower bound for \{C,D\} iff \(Y \subseteq X\) for every \(X \in \{C,D\}\). 
+      Therefore, \(Y \subseteq C\) and \(Y \subseteq D\). Therefore \(Y \subseteq 
+      C \cap D\). Therefore as an arbitrary \(Y\) is a lower bound for \(\{C,D\}\), \(Y \subseteq C \cap D\) 
+      for every lower bound \(Y\) for \(\{C,D\}\).
+    \end{enumerate}
+    Therefore if \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(C\) and \(D\) are subsets of \(A\), then the greatest lower bound 
+  of \(\{C,D\}\) is \(C \cap D\).\\
+  We showed we showed if an arbitrary \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(C\) and \(D\) are subsets of \(A\), then the least upper-bound 
+  of \(\{C,D\}\) is \(C \cup D\) and the greatest lower bound of \(\{C,D\}\) is \(C \cap 
+  D\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{14}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Let \(A\) be a set and \(\subseteq\) be the ordering for \(\mathscr{P}{(A)}\)}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} Let \(\mathscr{P}\) be 
+a family of subsets of \(A\). Prove that the least upper bound of \(\mathscr{P}\) 
+is \(\bigcup\limits_{B \in \mathscr{P}}B\) and the greatest lower bound of \(\mathscr{P}\) 
+is \(\bigcap\limits_{B \in \mathscr{P}}B\).
+\begin{theorem1}
+  If \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(\mathscr{P}\) is a family of subsets of \(A\), then the least upper-bound 
+  of \(\mathscr{P}\) is \(\bigcup\limits_{B \in \mathscr{P}}B\) and the greatest lower bound of \(\mathscr{P}\) is \(\bigcap\limits_{B \in \mathscr{P}}B\).
+  \begin{proof}
+    Suppose an arbitrary \(A\) is a set and \(\mathscr{P}\) is a family of subsets of \(A\).\\
+    Then \(\mathscr{P} \subseteq \mathscr{P}{(A)}\).\\
+    \(\bigcup\limits_{B \in \mathscr{P}}B\) is the least upper bound for \(\mathscr{P}\) iff:
+    \begin{enumerate}[(i)]
+      \item \(\bigcup\limits_{B \in \mathscr{P}}B\) is an upper bound for \(\mathscr{P}\).\\
+      Let an arbitrary \(B \in \mathscr{P}\). \(\bigcup\limits_{B \in \mathscr{P}}B\) is an upper bound for \(\mathscr{P}\) iff \(B \subseteq \bigcup\limits_{B \in \mathscr{P}}B\) for every \(B \in \mathscr{P}\). By theorem 2.3.1b, \(B \subseteq \bigcup\limits_{B \in \mathscr{P}}B\). Therefore by definition, as an arbitrary \(B \in \mathscr{P}\), \(\bigcup\limits_{B \in \mathscr{P}}B\) is an upper bound for 
+      \(\mathscr{P}\).
+      \item \(\bigcup\limits_{B \in \mathscr{P}}B \subseteq Y\) for every upper bound \(Y\) for 
+      \(\mathscr{P}\).\\
+      Let an arbitrary \(Y\) be an upper bound for \(\mathscr{P}\). By definition of an 
+      upper bound, \(Y\) is an upper bound for \(\mathscr{P}\) iff \(B \subseteq Y\) for every \(B \in \mathscr{P}\). 
+      Therefore, \(B \subseteq Y\). Recall the proof established in \S 2.3 exercise 10c {(If \(A \subseteq D\) for every \(A \in \mathscr{A}\), then \(\bigcup\limits_{A \in \mathscr{A}}A \subseteq D\))}. Therefore \(\bigcup\limits_{B \in \mathscr{P}}B \subseteq 
+      Y\). Therefore as an arbitrary \(Y\) is an upper bound for \(\mathscr{P}\), \(\bigcup\limits_{A \in \mathscr{A}}A \subseteq Y\) 
+      for every upper bound \(Y\) for \(\mathscr{P}\).
+    \end{enumerate}
+    Therefore if \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(\mathscr{P}\) are subsets of \(A\), then the least upper-bound 
+  of \(\mathscr{P}\) is \(\bigcup\limits_{B \in \mathscr{P}}B\).
+  We now show that the greatest lower bound of \(\mathscr{P}\) is \(\bigcap\limits_{B \in \mathscr{P}}B\).
+      \noindent\(\bigcap\limits_{B \in \mathscr{P}}B\) is the greatest lower bound for \(\mathscr{P}\) iff:
+    \begin{enumerate}[(i)]
+      \item \(\bigcap\limits_{B \in \mathscr{P}}B\) is an lower bound for \(\mathscr{P}\).\\
+      Let an arbitrary \(B \in \mathscr{P}\). \(\bigcap\limits_{B \in \mathscr{P}}B\) is a lower bound for \(\mathscr{P}\) iff \(\bigcap\limits_{B \in \mathscr{P}}B \subseteq B\) for every \(B \in \mathscr{P}\). By theorem 2.3.1a, \(\bigcap\limits_{B \in \mathscr{P}}B \subseteq B\). 
+      Therefore by definition, as \(B \in \mathscr{P}, \bigcap\limits_{B \in \mathscr{P}}B\) is a lower bound 
+      for \(\mathscr{P}\).
+      \item \(Y \subseteq \bigcap\limits_{B \in \mathscr{P}}B\) for every lower bound \(Y\) for 
+      \(\mathscr{P}\).\\
+      Let an arbitrary \(Y\) be a lower bound for \(\mathscr{P}\). By definition of a 
+      lower bound, Y is an lower bound for \(\mathscr{P}\) iff \(Y \subseteq B\) for every \(B \in \mathscr{P}\). 
+      Recall the proof established in \S 2.3 exercise 10a {(If \(B \subseteq A\) for every \(A \in \mathscr{A}\), then \(B \subseteq \bigcap\limits_{A \in \mathscr{A}}A\))}. Therefore \(Y \subseteq 
+      \bigcap\limits_{B \in \mathscr{P}}B\). Therefore as an arbitrary \(Y\) is a lower bound for \(\mathscr{P}\), \(Y \subseteq \bigcap\limits_{B \in \mathscr{P}}B\) 
+      for every lower bound \(Y\) for \(\mathscr{P}\).
+    \end{enumerate}
+    Therefore if \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(\mathscr{P}\) are subsets of \(A\), then the greatest lower bound 
+  of \(\mathscr{P}\) is \(\bigcap\limits_{B \in \mathscr{P}}B\).\\
+  We showed we showed if an arbitrary \(A\) is a set, if \(\subseteq\) is a ordering for \(\mathscr{P}{(A)}\), and if \(\mathscr{P}\) is a family of subsets of \(A\), then the least upper-bound 
+  of \(\mathscr{P}\) is \(\bigcup\limits_{B \in \mathscr{P}}B\) and the greatest lower bound of \(\mathscr{P}\) is \(\bigcap\limits_{B \in \mathscr{P}}B\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{18}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Prove that every subset of a well-ordered set is well-ordered.}
+\begin{theorem1}
+  Every subset of a well-ordered set is well-ordered.
+  \begin{proof}
+    Let \(A\) be a well-ordered set.\\
+    Let an arbitrary \(B \subseteq A\).\\
+    Let a non-empty \(C \subseteq B\).\\
+    Therefore \(C \subseteq A\) by subset transitivity.\\
+    Because \(A\) is a well-ordered set, \(C\) has the smallest element.\\
+    Therefore, by definition of a well-ordered set, \(B\) is well-ordered.\\
+    Because \(A\) is a well-ordered set and we let an arbitrary \(B \subseteq A\) and a non-empty, \(C \subseteq B\), 
+    we conclude any subset of a well-ordered set is well-ordered.
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{0}
+\section*{\S 3.4 Exercise \arabic{ProblemCounter}: Let \(R\) be a partial order for a set \(A\) and \(B \subseteq A\). Then if inf{(B)} exists, it is unique.}
+\begin{theorem1}
+  If \(R\) is a partial order for a set \(A\) and \(B \subseteq A\) and if inf{(B)} exists, then it is unique.
+  \begin{proof}
+    Suppose that \(x\) and \(y\) are both infima for \(B\).\\
+    Then \(x\) is a lower bound for \(B\) and \(z R x\) for every lower bound \(z\) 
+    for B. In particular, \(yRx\).\\
+    And \(y\) is a lower bound for \(B\) and \(z R y\) for every lower bound \(z\) 
+    for B. In particular, \(xRy\).\\
+    If the relations \(zRx\) and \(zRy\) implies x = y, then inf{(B)} is unique.\\
+    Because we let \(x\) and \(y\) be infima for B, we showed that if \(R\) is a 
+    partial order for a set \(A\) and \(B \subseteq A\), then inf(B) is unique.
+  \end{proof}
+\end{theorem1}
+\end{document}

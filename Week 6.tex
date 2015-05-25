@@ -1,0 +1,212 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\title{MATH 393 Week 6 Assignment 2\textsuperscript{nd} Draft}\author{Brett G. Bonner}\date{February 24, 2014}\maketitle
+\linespread{1.5}
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{1} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{10} % same
+%
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}: Find the union and intersection of each of the following families or indexedcollections.}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+For each \(n \in \mathbb{N}\) let \(M_n = \{\ldots, -3n, -2n, -n, 0, n, 2n, 3n, \ldots\}\) and let \(\mathscr{M} = \{M_n: n \in \mathbb{N}\}\) \\
+Union:\\
+If \(n=1\), \(M_n = \{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\} = \mathbb{Z}\)\\
+If \(n=2\), \(M_n = \{\ldots, -6, -4, -2, 0, 2, 4, 6, \ldots\}\)\\
+\(\bigcup\limits_{n \in \mathbb{N}}M_n = \mathbb{Z}\)\\
+
+\noindent Intersection:\\
+\(\bigcap\limits_{n \in \mathbb{N}}M_n = \{0\}\) since $\ldots$\\
+0 is an element of all sets \(M_n\) and \\
+For any \(n \in \mathbb{N}\), \(n \notin M_{n+1}\) and \(-n \notin M_{n+1}\) (for any natural number, neither the number nor its additive inverse are elements of the subsequent set indexed n+1)
+
+
+\newpage
+\setcounter{SubsectionCounter}{4}
+\setcounter{ProblemCounter}{3}
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}: Prove part (b) of Theorem 2.3.1: \(B \subseteq \bigcup\limits_{A\in\mathscr{A}}A.\)}
+\begin{theorem1}
+\(B \subseteq \bigcup\limits_{A\in\mathscr{A}}A.\)
+\begin{proof}
+  Let \(\mathscr{A}\) be a family of sets.\\
+  Let \(B \in \mathscr{A}\)\\
+  Let \(x\) be arbitrary, and let \(x \in B\).\\
+  As \(x \in B\) and \(B \in \mathscr{A}\), by definition then \(x \in \bigcup\limits_{A\in\mathscr{A}}A\), then there exists an \(A \in \mathscr{A}\) such that \(x \in A\).\\
+  Therefore, \(B \subseteq \bigcup\limits_{A\in\mathscr{A}}A\).\\
+  Because we let \(B \in \mathscr{A}\) and \(x \in B\), we proved \(B \subseteq \bigcup\limits_{A\in\mathscr{A}}A\).
+\end{proof}
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{4}
+\setcounter{SubsectionCounter}{1}
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}: Let the universe of discourse be the set \(\mathbb{R}\) of real numbers, and let \(\mathscr{A}\) be theempty family of subsets of \(\mathbb{R}\).:}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Show that \(\bigcap\limits_{A\in\mathscr{A}}A=\mathbb{R}\)
+\begin{theorem2}
+\(\bigcap\limits_{A\in\mathscr{A}}A=\mathbb{R}\) if \(\mathscr{A}\) is the empty 
+family of subsets of \(\mathbb{R}\)
+   \begin{proof}
+    Let the universe of discourse be the set \(\mathbb{R}\) of real numbers. Let 
+    \(\mathscr{A}\) be the empty family of subset \(\mathbb{R}\).\\\\
+    For equivalence, we must show that (i) \(\bigcap\limits_{A \in \mathscr{A}}A \subseteq \mathbb{R}\) and that (ii) \(\mathbb{R} \subseteq \bigcap\limits_{A \in 
+    \mathscr{A}}A\).\\\\
+    i) Let \(x\) be arbitrary and \(x \in \bigcap\limits_{A \in \mathscr{A}}A\). As \(\mathscr{A}\) 
+    is empty, there is no \(A\) such that \(A \in \mathscr{A}\). Thus \(`x \in A\) for every \(A \in \mathscr{A}\)' holds for all \(x \in \mathscr{R}\).\\
+    Thus if \(x \in \bigcap\limits_{A \in A}A, \text{ then } x \in \mathbb{R}\).\\
+    Thus \(\bigcap\limits_{A \in \mathscr{A}}A \subseteq \mathbb{R}\).\\\\
+    ii) Let \(x\) be an arbitrary element of \(\mathbb{R}\). Show that if \(x \in 
+    \mathbb{R}\), then \(x \in \bigcap\limits_{A \in \mathscr{A}}A\).
+    As \(\mathscr{A}\) is empty, then there is no \(A\) such that \(A \in \mathscr{A}\).
+    Thus the statement, if \(A \in \mathscr{A}\) then \(x \in A\) is always 
+    true, because the antecedent is always false.\\
+    Therefore, for every \(A \in \mathscr{A}, x \in A\).\\
+    Thus if \(x \in \mathscr{R}\), then \(x \in \bigcap\limits_{A \in \mathscr{A}}A\) 
+    by definition.\\
+    Thus \(\mathbb{R} \subseteq \bigcap\limits_{A \in \mathscr{A}}A\)
+  \end{proof}
+\end{theorem2}
+
+\newpage
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}: Let the universe of discourse be the set \(\mathbb{R}\) of real numbers, and let \(\mathscr{A}\) be theempty family of subsets of \(\mathbb{R}\).:}
+\noindent \setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Show that \(\bigcup\limits_{A\in\mathscr{A}}A=\varnothing\)
+\begin{theorem2}
+\(\bigcup\limits_{A\in\mathscr{A}}A=\varnothing\)
+  \begin{proof}
+    Let the universe of discourse be the set \(\mathbb{R}\) of real numbers. Let 
+    \(\mathscr{A}\) be the empty family of subset \(\mathbb{R}\).\\
+    Suppose \(\bigcup\limits_{A\in\mathscr{A}}A\neq\varnothing\).\\
+    Let \(x\) be arbitrary where \(x \in \bigcap\limits_{A \in \mathscr{A}}A\), 
+    then \(x \in A\) for some \(A \in \mathscr{A}\).\\
+    Since \(\mathscr{A}\) is empty, there is a contradiction as there is no \(A\) such that \(A \in 
+    \mathscr{A}\). Therefore \(\bigcup\limits_{A\in\mathscr{A}}A=\varnothing\).
+  \end{proof}
+\end{theorem2}
+
+\noindent \setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Conclude that \(\bigcap\limits_{A\in\mathscr{A}}A \subseteq \bigcup\limits_{A\in\mathscr{A}}A\) 
+is false in this example
+\begin{theorem2}
+\(\bigcap\limits_{A\in\mathscr{A}}A \subseteq \bigcup\limits_{A\in\mathscr{A}}A\) 
+is false if \(\mathscr{A}\) is an empty family of subset \(\mathbb{R}\)..
+   \begin{proof}
+    Let the universe of discourse be the set \(\mathbb{R}\) of real numbers and let \(\mathscr{A}\) be the empty family of subsets of \(\mathbb{R}\).\\
+    As demonstrated by {(4.a)}, \(\bigcap\limits_{A\in\mathscr{A}}A=\mathbb{R}\).\\
+    As demonstrated by {(4.b)}, 
+    \(\bigcup\limits_{A\in\mathscr{A}}A=\varnothing\).\\
+    By definition of a subset, \(\bigcap\limits_{A\in\mathscr{A}}A \subseteq \bigcup\limits_{A\in\mathscr{A}}A\)  
+    if there exists an arbitrary \(x\) such that \(x \in \bigcap\limits_{A\in\mathscr{A}}A\) 
+    and \(x \in \bigcup\limits_{A\in\mathscr{A}}A\).\\
+    Let an arbitrary \(x \in x \in \bigcap\limits_{A\in\mathscr{A}}A\). 
+    Therefore \(x \in \bigcup\limits_{A\in\mathscr{A}}A\), which is a 
+    contradiction as \(\bigcup\limits_{A\in\mathscr{A}}A=\varnothing\).\\
+    Therefore we proved \(\bigcap\limits_{A\in\mathscr{A}}A \subseteq \bigcup\limits_{A\in\mathscr{A}}A\) 
+is false if \(\mathscr{A}\) is an empty family of subset \(\mathbb{R}\).
+  \end{proof}
+\end{theorem2}
+
+\newpage
+
+\setcounter{ProblemCounter}{5}
+\setcounter{SubsectionCounter}{1}
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}:}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Prove parts (a) and (b) of Theorem 2.3.2\\
+Theorem 2.3.2: Let \(\mathscr{A} = \{A_\alpha:a \in \Delta\}\) be an indexed collection of 
+sets.\\
+\textbf{(a)}: \(\bigcap\limits_{\alpha \in \Delta}A_\alpha\subseteq A_{\beta}\) for each \(\beta \in 
+\Delta\).
+\begin{theorem2}
+\(\bigcap\limits_{\alpha \in \Delta}A_\alpha\subseteq A_{\beta}\) for each \(\beta \in 
+\Delta\)
+\begin{proof}
+  Let \(\mathscr{A}\) be an indexed collection of sets, \(A_\beta \in \mathscr{A}\), and let \(\beta \in \Delta\).\\
+  Suppose an arbitrary \(x \in \bigcap\limits_{\alpha \in \Delta}A_\alpha\). Then \(x \in A_\alpha\) 
+  for each \(\alpha \in \Delta\).\\
+  Since \(\beta \in \Delta\), therefore \(x \in A_\beta\).\\ 
+  Thus \(\bigcap\limits_{\alpha \in \Delta}A_\alpha\subseteq A_{\beta}\) for each \(\beta \in 
+  \Delta\).\\
+\end{proof}
+\end{theorem2}
+
+\noindent \textbf{(b)}: \(A_{\beta} \subseteq \bigcup\limits_{\alpha \in \Delta}A_\alpha \) for each \(\beta \in 
+\Delta\).
+\begin{theorem2}
+\(A_{\beta} \subseteq \bigcup\limits_{\alpha \in \Delta}A_\alpha \) for each \(\beta \in 
+\Delta\).
+\begin{proof}
+  Let \(\mathscr{A}\) be an indexed collection of sets, \(\bigcup\limits_{\alpha \in \Delta}A_\alpha \in \mathscr{A}\), and let \(\beta \in \Delta\).\\
+  Suppose an arbitrary \(x \in A_\beta\).\\
+  If \(A_{\beta} \subseteq \bigcup\limits_{\alpha \in \Delta}A_\alpha \), then \(x \in A_\alpha\) 
+  and there is exists an \(\alpha \in \Delta\).\\
+  Since \(\beta \in \Delta\), \(x \in \bigcup\limits_{\alpha \in \Delta}A_\alpha\) and thus \(A_{\beta} \subseteq \bigcup\limits_{\alpha \in \Delta}A_\alpha \) for each \(\beta \in 
+\Delta\)\\
+\end{proof}
+\end{theorem2}
+\newpage
+\noindent \setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Give a direct proof of part (d) of Theorem 2.3.2 that does not use part (c).\\
+Theorem 2.3.2 (d): \(\left(\bigcup\limits_{\alpha \in \Delta}A_\alpha\right)^c = \bigcap\limits_{\alpha \in \Delta}A\limits_{\alpha}^c \)
+\begin{theorem2}
+  \(\left(\bigcup\limits_{\alpha \in \Delta}A_\alpha\right)^c = \bigcap\limits_{\alpha \in \Delta}A\limits_{\alpha}^c \)
+  \begin{proof}
+    \(\left(\bigcup\limits_{\alpha \in \Delta}A_\alpha\right)^c \)
+    \begin{align*}
+      &\text{iff } x \notin \bigcup\limits_{\alpha \in \Delta}A_\alpha\\
+      &\text{iff it is not the case that there is an } \alpha \in \Delta, x \in A_\alpha\\
+      &\text{iff for some } \beta \in \Delta, x \notin A_\beta\\
+      &\text{iff for some } \beta \in \Delta, x \in A\limits_{\beta}^c\\
+      &\text{iff } \bigcap\limits_{\alpha \in \Delta}A\limits_{\alpha}^c
+    \end{align*}
+    Therefore, \(\left(\bigcup\limits_{\alpha \in \Delta}A_\alpha\right)^c = \bigcap\limits_{\alpha \in \Delta}A\limits_{\alpha}^c \)
+  \end{proof}
+\end{theorem2}
+
+\newpage
+
+\setcounter{ProblemCounter}{16}
+\setcounter{SubsectionCounter}{1}
+\section*{\S 2.3 Exercise \arabic{ProblemCounter}: Suppose \(\mathscr{A}=\{A_i: i \in \mathbb{N}\}\) is a family of sets such that for all \(i, j \in \mathbb{N}\) if \(i \leq j\), then \(A_j \subseteq A_i\). (Such a family is called a \textit{decreasing nested family} of sets).}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Prove that for every \(k \in \mathbb{N}, \bigcap\limits_{i=1}^kA_i=A_k\).
+\begin{theorem2}
+For every \(k \in \mathbb{N}, \bigcap\limits_{i=1}^kA_i=A_k\)
+  \begin{proof}
+    Let \(k \in \mathbb{N}\) be arbitrary.\\
+    For equivalence, we must show \(\bigcap\limits_{i=1}^kA_i \subseteq A_k\) and \(A_k \subseteq \bigcap\limits_{i=1}^kA_i\)\\
+    \textbf{i) \(\bigcap\limits_{i=1}^kA_i \subseteq A_k\)}\\
+    Let \(x \in \bigcap\limits_{i=1}^kA_i\) be arbitrary.\\
+    By definition of intersection of a family, \(x \in A_i\) for all \(i = 1, 2, \ldots k\).\\
+    Therefore \(x \in A_k\) and we showed \(\bigcap\limits_{i=1}^kA_i \subseteq 
+    A_k\).\\
+    \textbf{ii) \(A_k \subseteq \bigcap\limits_{i=1}^kA_i\)}\\
+    Let \(x \in A_k\) be arbitrary.\\
+    Let \(i \leq k\) be arbitrary.\\
+    Because the family is nested, \(A_k \subseteq A_i\).\\
+    Since \(x \in A_k\) and \(A_k \subseteq A_i\), we conclude \(x \in A_i\).\\
+    Because \(i \leq k\) was arbitrary, \(x \in A_i\) for all \(i \leq k\).\\
+    So \(x \in \bigcap\limits_{i=1}^kA_i\) and therefore \(A_k \subseteq \bigcap\limits_{i=1}^kA_i\).\\
+    \textbf{Conclusion:}
+    Since we proved \(\bigcap\limits_{i=1}^kA_i \subseteq A_k\) and \(A_k \subseteq \bigcap\limits_{i=1}^kA_i\), \(\bigcap\limits_{i=1}^kA_i=A_k\).\\
+    Because we let \(k \in \mathbb{N}\) be arbitrary, we proved for all \(k \in 
+    \mathbb{N}\), \(\bigcap\limits_{i=1}^kA_i=A_k\)
+  \end{proof}
+\end{theorem2}
+\end{document}

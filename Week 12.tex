@@ -1,0 +1,177 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{pgfplots}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}  
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{arrows,positioning,automata,fit,shapes,calc,backgrounds}
+\usepackage{framed}
+\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 12 Assignment 2\textsuperscript{nd} Draft}\author{Brett Bonner}\date{April 11, 2014}\maketitle
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\newpage
+\setcounter{ProblemCounter}{5}
+\section*{\S 4.3 Exercise \arabic{ProblemCounter}: Prove that if \(f:A \xrightarrow{onto} B, g:B \xrightarrow{onto} C,\) then \(g \circ f: A \xrightarrow{onto} C\) (Theorem 4.3.1):}
+\setcounter{SubsectionCounter}{1}
+\begin{theorem1}
+  If \(f:A\xrightarrow{onto}B\) and \(g:B\xrightarrow{onto}C\), then \(g \circ f: A\xrightarrow{onto} 
+  C\).
+  \begin{proof}
+Suppose \(f:A\xrightarrow{onto}B\),  \(g:B\xrightarrow{onto}C\). Let \(w \in C\).\\
+Since \(g:B\xrightarrow{onto}C\), there exits \(t \in B\) be such that \(g{(t)}=w\).\\
+Since \(f:A \xrightarrow{onto} B\), there exists \(x \in A\) be such that \(f{(x)}=t\).\\
+As \(f{(x)}=t\), \(w=g{(t)}=g{(f{(x)})}={(g \circ f)}{(x)}\).\\
+Because we let an arbitrary \(w \in C\), and \(t \in B\) such that \(g{(t)}=w\)
+and we let an \(x \in A\) such that \(f{(x)}=t\), we showed that if \(f:A\xrightarrow{onto}B\) 
+and \(g:B\xrightarrow{onto}C\), then \(g \circ f: A\xrightarrow{onto} 
+  C\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\addtocounter{ProblemCounter}{1}
+\section*{\S 4.3 Exercise \arabic{ProblemCounter}: Prove that if \(f:A \rightarrow B, g:B \rightarrow C,\) and \(g \circ f: A \xrightarrow{1-1} C\), then \(f:A \xrightarrow{1-1} B\) (Theorem 4.3.4):}
+\setcounter{SubsectionCounter}{1}
+\begin{theorem1}
+if \(f:A \rightarrow B, g:B \rightarrow C,\) and \(g \circ f: A \xrightarrow{1-1} C\), then \(f:A \xrightarrow{1-1} 
+B\). That is, if the composite of two functions is one-to-one, then the first 
+function applied must be one-to-one.
+\begin{proof}Suppose \(f: A \rightarrow B\) and \(g:B \rightarrow C\) are functions, and that \(g \circ f: A \xrightarrow{1-1} C\).\\
+Let \(x,y \in A\) and \(f{(x)} = f{(y)}\).\\
+Then since \(g\) is a function, \(g{(f{(x)})} = g{(f{(y)})}\).\\
+Therefore \({(g \circ f)}{(x)} = {(g \circ f)}{(y)}\)\\
+Since \(g \circ f: A \xrightarrow{1-1} C\), by definition \({(g \circ f)}{(x)} = {(g \circ f)}{(y)}\) and 
+\(x=y\).\\
+Thus, because we let \(x,y \in A\) and \(f{(x)}=f{(y)}\) and showed \(x=y\),\\
+We can conclude that \(f:A \xrightarrow{1-1} B\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\addtocounter{ProblemCounter}{1}
+\section*{\S 4.3 Exercise \arabic{ProblemCounter}: Prove parts {(a)} and {(b)} of Theorem 4.3.5:}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  A restriction of a one-to-one function is one-to-one.
+  \begin{proof}
+Let \(D \subseteq A\), \(f:A \xrightarrow{1-1} B\).\\
+To show \(f|_{D} A \xrightarrow{1-1} B\), let \(x,y \in D\) and \(f|_{D}{(x)} = f|_{D}{(y)}\).\\
+Then \(f|_{D}{(x)} = f{(x)}, \) and \(f|_{D}{(y)} = f{(y)}\).\\
+Therefore \(f{(x)}=f{(y)}\).\\
+As \(f:A \xrightarrow{1-1} B\) and since  \(f{(x)}=f{(y)}\), then \(x=y\).\\
+Since we assumed \(x,y \in D\), \(D \subseteq A\), \(f: A \xrightarrow{1-1} B\), and  \(f|_{D}{(x)} = f|_{D}{(y)}\)\\ we showed 
+\(x=y\) to conclude \(f|_{D} A \xrightarrow{1-1} B\).\\
+  \end{proof}
+  Biconditional attempt: please give feedback but do not grade.
+\end{theorem1}
+\newpage
+\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  If \(h:A \xrightarrow{onto} C, g:B\xrightarrow{onto}D, \text{ and } A \cap B = \varnothing\), 
+  then \(h \cup g: A \cup B \xrightarrow{onto} C \cup D\).
+  \begin{proof}
+Let \(h: A \xrightarrow{onto} C\), \(g: B \xrightarrow{onto} D\), and \(A \cap B = 
+\varnothing\).\\
+\(h \cup g: A \cup B \xrightarrow{onto} C \cup D\) we must show \(Rng{(h \cup g)} = C \cup D\).\\
+That is, show \(C \cup D \subseteq Rng{(h \cup g)}\), since we know \(Rng{(h \cup g)} \subseteq C \cup D\).\\
+Let \(y \in C \cup D\), then \(y \in C\) or \(y \in D\).\\
+If \(y \in C\), then \({(x,y)} \in h\) for some \(x \in A\), since \(h:A \xrightarrow{onto} 
+C\), \(Rng{(h)}=C\).\\
+If \(y \in D\), then \({(x,y)} \in g\) for some \(x \in B\), since \(g:B \xrightarrow{onto} D\), \(Rng{(g)}=D\) 
+.\\
+Thus \({(x,y)} \in h \cup g\), \({y \in Rng{(h \cup g)}}\) and therefore \(C \cup D \subseteq Rng{(h \cup g)}\).\\
+Then \(Rng{(h \cup g)} = C \cup D\), since \(y \in C \cup D\) and we have shown there is a \(x \in A\) or \(x \in B\) with \(A \cap B = \varnothing\) such that \({(x,y)} \in h \cup g\).\\
+Because we supposed \(h: A \xrightarrow{onto} C\), \(g: B \xrightarrow{onto} D\), \(A \cap B = 
+\varnothing\) and let \(y \in C \cup D\), we showed that there is an \(x \in A\) 
+or \(x \in B\) such that \({(x,y)} \in h \cup g\) and thus \(Rng{(h \cup g)} = C \cup 
+D\).\\
+Therefore if \(h:A \xrightarrow{onto} C, g:B\xrightarrow{onto}D, \text{ and } A \cap B = \varnothing\), 
+  then \(h \cup g: A \cup B \xrightarrow{onto} C \cup D\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\addtocounter{ProblemCounter}{1}
+\section*{\S 4.3 Exercise \arabic{ProblemCounter}: Find sets \(A,B,C\) and functions \(f:A \rightarrow B\) and \(g:B \rightarrow C\) such that:}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(f\) is onto 
+\(B\),but \(g \circ f\) is not onto \(C\).\\
+Let \(A = \{1,2,3\}, B=\{a,b,c\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,c)}\}\), so \(f\) is onto \(B\).\\
+\(g:\{{(a,x)},{(b,y)},{(c,y)}\}\), so \(g\) is not onto \(C\).\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,y)}\}\) so \(g \circ f\) is not onto 
+\(C\).\\
+\\\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(g\) is onto 
+\(C\) but \(g \circ f\) is not onto \(C\)\\
+Let \(A = \{1,2,3\}, B=\{a,b,c\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,b)}\}\), so \(f\) is not onto \(B\).\\
+\(g:\{{(a,x)},{(b,y)},{(c,z)}\}\), so \(g\) is onto \(C\).\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,y)}\}\) so \(g \circ f\) is not onto 
+\(C\).\\
+\\\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(g \circ f\) 
+is onto \(C\), but \(f\) is not onto \(B\).\\
+Let \(A = \{1,2,3\}, B=\{a,b,c,d\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,c)}\}\), so \(f\) is onto \(B\).\\
+\(g:\{{(a,x)},{(b,y)},{(c,z)},{(d,z)}\}\), so \(g\) is onto \(C\).\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,z)}\}\) so \(g \circ f\) is not onto 
+\(C\).\\
+\\\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(f\) is 
+one-to-one, but \(g \circ f\) is not one-to-one.\\
+Let \(A = \{1,2,3\}, B=\{a,b,c\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,c)}\}\), so \(f\) is one-to-one.\\
+\(g:\{{(a,x)},{(b,y)},{(c,y)}\}\), so \(g\) is not one-to-one.\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,y)}\}\) so \(g \circ f\) is not one-to-one.
+\newpage
+\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(g\) is 
+one-to-one, but \(g \circ f\) is not one-to-one.\\
+Let \(A = \{1,2,3\}, B=\{a,b,c\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,b)}\}\), so \(f\) is not one-to-one.\\
+\(g:\{{(a,x)},{(b,y)},{(c,z)}\}\), so \(g\) is one-to-one.\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,y)}\}\) so \(g \circ f\) is not 
+one-to-one.\\
+\\\addtocounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}} \(g \circ f\) is 
+one-to-one, but \(g\) is not one-to-one.\\
+Let \(A = \{1,2,3\}, B=\{a,b,c,d\}, C=\{x,y,z\}\).\\
+\(f:\{{(1,a)},{(2,b)},{(3,d)}\}\), so \(f\) is not one-to-one.\\
+\(g:\{{(a,x)},{(b,y)},{(c,z)},{(d,z)}\}\), so \(g\) is not one-to-one.\\
+\(g \circ f = \{{(1,x)},{(2,y)},{(3,z)}\}\) so \(g \circ f\) is one-to-one.
+\newpage
+\setcounter{ProblemCounter}{4}
+\section*{\S 4.4 Exercise \arabic{ProblemCounter}: Prove parts {(b)} of Theorem 4.4.2: If \(F:A \rightarrow B\) and \(F^{-1}\) is a function, then \(F\) is one-to-one}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  Let \(F\) be a function from set \(A\) to set \(B\). If \(F^{-1}\) is a 
+  function, then \(F^{-1}\) is one-to-one.
+  \begin{proof}
+Suppose that \(F: A \rightarrow B\). Let arbitrary \(x,y \in B\).\\
+Assume that \(F^{-1}\) is a function and assume that \(F^{-1}{(x)} = F^{-1}{(y)} = z\) for some \(z \in 
+A\).\\
+Then \({(x,z)} \in F^{-1}\) and \((y,z) \in F^{-1}\).\\
+As \(F\) is a function, \(F{(z)}=x\) and \(F{(z)}=y\). Then \(x = y\).\\
+Therefore \(F^{-1}\) is one-to-one.\\
+Since we supposed \(F:A \rightarrow B\), \(F^{-1}\) is a function, and let an arbitrary \(x,y \in B\) such that \(F^{-1}{(x)} = F^{-1}{(y)} = z\) for some \(z \in 
+A\), we showed that if \(F^{-1}\) is a function, then \(F^{-1}\) is one-to-one.
+  \end{proof}
+\end{theorem1}
+\end{document}

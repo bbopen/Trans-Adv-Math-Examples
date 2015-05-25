@@ -1,0 +1,388 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 7 Assignment 2\textsuperscript{nd} Draft}\author{Brett Bonner}\date{March 10, 2014}\maketitle
+\linespread{1.5}
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\addtocounter{ProblemCounter}{6} % set them to some other numbers than 0
+\addtocounter{SubsectionCounter}{3} % same
+%
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Use PMI to prove the following for all natural numbers \(n\).}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(\sum\limits_{i=1}^n 2^i = 2^{n+1} - 2\)
+\begin{theorem1}
+  \(\sum\limits_{i=1}^n 2^i = 2^{n+1} - 2 \) for all natural numbers \(n\).
+\begin{proof}
+  Let \(S = \{n \in \mathbb{N}: \sum\limits_{i=1}^n 2^i = 2^{n+1} - 2 \}\)\\
+  \begin{enumerate}[(i)]
+    \item  To show the statement is true for \(n=1\).
+    \begin{align*}
+    &\sum\limits_{i=1}^1 2^i = 2^1 = 2\\
+    &2^{n+1}-2 = 2^{1+1} -2 = 2^{2} -2 = 4 - 2 = 2
+    \end{align*}
+    Therefore \(1 \in S\).
+    \newpage
+    \item Assume that \(\sum\limits_{i=1}^n 2^i = 2^{n+1} - 2 \) for all natural numbers 
+    \(n\).\\
+    Using the hypothesis of induction, to show that if \(n \in S\), then \(n+1 \in S\) for all natural numbers \(n\):
+    \begin{align*}
+      \sum\limits_{i=1}^{n+1} 2^i &= 2^{{(n+1)}+1} - 2\\
+      \text{Rewriting the summation, }2^{n+1} + \sum\limits_{i=1}^{n} 2^i &=2^{n+2} - 2\\
+      \text{Using the assumption }\sum\limits_{i=1}^n 2^i = 2^{n+1} - 2, 2^{n+1} + {(2^{n+1} -2)} &= 2^{n+2} - 2\\
+      2^{n+2} - 2 &= 2^{n+2} - 2
+    \end{align*}
+    Therefore 
+    \item By (i), (ii), and PMI, we showed that \(1 \in S\) and if \(n \in S\), then \(n+1 \in S\) 
+    and therefore \(\sum\limits_{i=1}^n 2^i = 2^{n+1} - 2 \) for all natural numbers \(n\).
+  \end{enumerate}
+\end{proof}  
+\end{theorem1}
+\newpage
+
+\setcounter{SubsectionCounter}{5}
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Use PMI to prove the following for all natural numbers \(n\).}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2 \)
+\begin{theorem1}
+  \(1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2 \) for all natural numbers \(n\).
+\begin{proof}
+  Let \(S = \{n \in \mathbb{N}: 1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2 \}\)\\
+  \begin{enumerate}[(i)]
+    \item  To show \(1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2\) is true for 
+    \(n=1\):
+    \begin{align*}
+    1^3 &= \left[\frac{1{(1+1)}}{2}\right]^2\\
+    1 &= \left[\frac{{(2)}}{2}\right]^2\\
+    1 &= 1
+    \end{align*}
+    Therefore \(1 \in S\).
+    \newpage
+    \item To show if \(n \in S\), then \(n+1 \in S\) for all natural numbers \(n\),\\
+     assume \(1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2 \).\\
+     We want to show that \(1^3 + 2^3 + \cdots + {(n+1)}^3 = \left[\frac{{(n+1)}{(n+1+1)}}{2}\right]^2\) 
+    is true:
+    \begin{align*}
+    1^3 + 2^3 + \cdots + n^3 + {(n+1)^3} &= \left[\frac{{(n+1)}{(n+1+1)}}{2}\right]^2\\
+    \text{We substitute with our assumption }\left[\frac{n{(n+1)}}{2}\right]^2 + {(n+1)}^3 &= \left[\frac{{(n+1)}{(n+2)}}{2}\right]^2\\
+    \frac{n^2{(n+1)^2}}{2^2} + {(n+1)}^3 &= \cdots\\
+    \frac{n^2{(n+1)^2}+4{(n+1)}^3}{4} &= \cdots\\
+    \frac{{(n+1)}^2{(4n+4)}{(n^2)}}{4} &= \cdots\\
+    \frac{{(n+2)}{(n+2)}{(n+1)}^2}{4} &= \cdots\\
+    \frac{{(n+2)}^2{(n+1)}^2}{4} &= \cdots\\
+    \left[\frac{{(n+1)}{(n+2)}}{2}\right]^2 &= \left[\frac{{(n+1)}{(n+2)}}{2}\right]^2
+    \end{align*}
+    \item By {(i)} and {(ii)} and PMI, we showed that \(1 \in S\) and if \(n \in S\), then \(n+1 \in S\) 
+    and therefore \(1^3 + 2^3 + \cdots + n^3 = \left[\frac{n{(n+1)}}{2}\right]^2 \) for all natural numbers \(n\).
+\end{enumerate}
+\end{proof} 
+\end{theorem1}
+
+\newpage
+
+\setcounter{SubsectionCounter}{9}
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Use PMI to prove the following for all natural numbers \(n\).}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(\sum\limits_{i=1}^n\frac{1}{{(2i-1){(2i+1)}}}=\frac{n}{2n+1}\)
+\begin{theorem1}
+  \(\sum\limits_{i=1}^n\frac{1}{{(2i-1){(2i+1)}}}=\frac{n}{2n+1}\) for all natural numbers n.
+\begin{proof}
+  Let \(S = \{n \in \mathbb{N}: \sum\limits_{i=1}^n\frac{1}{{(2i-1){(2i+1)}}}=\frac{n}{2n+1}\}\)
+  \begin{enumerate}[(i)]
+    \item To show that \(1 \in S\):
+    \begin{align*}
+      \sum\limits_{i=1}^1\frac{1}{{(2(1)-1){(2(1)+1)}}} &= \frac{1}{2(1)+1}\\
+      \frac{1}{{(1)}{(3)}} &= \frac{1}{2+1}\\
+      \frac{1}{3} &= \frac{1}{3}
+    \end{align*}
+    \newpage
+    \item To show if \(n \in S\) then \(n+1 \in S\), assume \(\sum\limits_{i=1}^n\frac{1}{{(2i-1){(2i+1)}}}=\frac{n}{2n+1}\):
+    \begin{align*}
+      \sum\limits_{i=1}^{n+1}\frac{1}{{(2i-1){(2i+1)}}} &= 
+      \frac{n+1}{2{(n+1)}+1}\\
+      \frac{1}{{(2{(n+1)}-1)}{(2{(n+1)}+1)}} + \sum\limits_{i=1}^{n}\frac{1}{{(2i-1){(2i+1)}}} 
+      &= \frac{n+1}{2n+3}\\
+      \frac{1}{{(2n+1)}{(2n+3)}} + \sum\limits_{i=1}^{n}\frac{1}{{(2i-1){(2i+1)}}} &= 
+      \frac{n+1}{2n+3}\\
+      \frac{1}{{(2n+1)}{(2n+3)}} + \frac{n}{2n+1} &= \frac{n+1}{2n+3}\\
+      \frac{1+n{(2n+3)}}{{(2n+1)}{(2n+3)}} &= \frac{n+1}{2n+3}\\
+      \frac{{(2n+1)}{(n+1)}}{{(2n+1)}{(2n+3)}} &= \frac{n+1}{2n+3}\\
+      \frac{n+1}{2n+3} &= \frac{n+1}{2n+3}
+    \end{align*}
+    Therefore \(n+1 \in S\).
+    \item By (i) and (ii) and PMI, we showed that \(1 \in S\) and if \(n \in S\), then \(n+1 \in S\) and therefore  \(\sum\limits_{i=1}^n\frac{1}{{(2i-1){(2i+1)}}}=\frac{n}{2n+1}\) for all natural numbers n..
+  \end{enumerate}
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{8}
+\setcounter{SubsectionCounter}{2}
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Use the Generalized PMI to prove the following.}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(2^n > n^2\) for all \(n > 4\).
+\begin{theorem1}
+  \(2^n > n^2\) for all \(n > 4\).
+\begin{proof}
+  Let \(S=\{n > 4: 2^n > n^2\}\)
+  \begin{enumerate}[(i)]
+    \item Show that \(5 \in S\) where \(S = \{n >4 | 2^n > n^2\}\)\\
+    \(2^5 > 5^2\)\\
+    \(32 > 5^2\)\\
+    \(32 > 25\), \text{ which is true and therefore } \(5 \in S\)
+    \newpage
+    \item Assume \(n \in S\) which means \(2^n > n^2\)\\
+    Show that \(n+1 \in S\) which means \(2^{n+1} > {(n+1)}^2\)
+    \begin{align*}
+      2^{n+1} &= 2{(2^n)}\\
+      &> 2n^2 \text{ by the induction hypothesis}\\
+      &= n^2 + n^2\\
+      &> n^2 + 4n \text{ because } n > 4 \Leftrightarrow n^2 > 4n\\
+      &= n^2 + 2n + 2n\\
+      &> n^2 +2n + 8 \text{ because } n > 4 \Leftrightarrow 2n > 8\\
+      &> n^2 +2n +1\\ 
+      &> n^2 + 2n + 1 \text{ because } 8 > 1\\
+      &= {(n+1)}^2
+    \end{align*}
+    \item By {(i)} and {(ii)} the Generalized PMI we proved  \(2^n > n^2\) for all natural numbers \(n > 4\)
+  \end{enumerate}
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{8}
+\setcounter{SubsectionCounter}{5}
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Use the Generalized PMI to prove the following.}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(\prod\limits_{i=2}^n \frac{i^2-1}{i^2} = \frac{n+1}{2n}\) for all \(n \geq 2\).
+\begin{theorem1}
+\(\prod\limits_{i=2}^n \frac{i^2-1}{i^2} = \frac{n+1}{2n}\) for all \(n \geq 2\).
+\begin{proof}
+    \begin{enumerate}[(i)]
+    \item To show \(2 \in n\)
+    \begin{align*}
+      \prod\limits_{i=2}^2 \frac{2^2-1}{2^2} &= \frac{2+1}{2{(2)}}\\
+      \frac{3}{4} &= \frac{3}{4}
+    \end{align*}
+    Therefore \(2 \in n\).
+    \newpage
+    \item To show if \(n \in S\) then \(n+1 \in S\), assume \(\prod\limits_{i=2}^n \frac{i^2-1}{i^2} = 
+    \frac{n+1}{2n}\). Then\\
+    \begin{align*}
+      \prod\limits_{i=2}^{n+1} \frac{i^2-1}{i^2} &= 
+    \frac{{(n+1)}+1}{2{(n+1)}}\\
+    \frac{{(n+1)}^2-1}{{(n+1)}^2} \cdot \prod\limits_{i=2}^n \frac{i^2-1}{i^2} 
+    &= \frac{n+2}{2n+2}\\
+    \frac{{(n+1)}^2-1}{{(n+1)}^2} \cdot \frac{n+1}{2n} 
+    &= \cdots \text{ by the induction hypothesis}\\
+    \frac{({(n+1)}^2-1){(n+1)}}{2n(n+1)^2} &= \cdots\\
+    \frac{({(n+1)}^2-1){(n+1)}^{-1}}{2n} &= \cdots\\
+    \frac{{(n+1)}^2-1^2}{2n{(n+1)}} &= \cdots\\
+    \frac{{(1+n-1)}{(n+1+1)}}{2n{(n+1)}} &= \cdots\\
+    \frac{n{(n+2)}}{2n{(n+1)}} &= \cdots\\
+    \frac{n+2}{2n+2} &= \frac{n+2}{2n+2}
+    \end{align*}
+    \item By {(i)} and {(ii)} and Generalized PMI, we showed that \(2 \in n\) 
+    and if \(n \in S\), then \(n+1 \in S\) and therefore \(\prod\limits_{i=2}^n \frac{i^2-1}{i^2} = \frac{n+1}{2n}\) for all \(n \geq 
+    2\).
+  \end{enumerate}
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{11}
+\section*{\S 2.4 Exercise \arabic{ProblemCounter}: Towers of Hanoi: Use the PMI to prove that with \(n\) disks, the puzzle can be solved in \(2^n-1\) moves.}
+
+\begin{theorem1}
+With \(n\) disks, the Towers of Hanoi puzzle can be solved in \(2^n-1\) moves.
+\begin{proof}
+  Let \(S = \{n | \text{For } n \text{ disks, it takes } 2^n-1 \text{ moves to complete the puzzle}\}\)
+    \begin{enumerate}[(i)]
+  \item To show \(1 \in S\), let \(n=1\).\\
+  \(2^{(1)}-1 = 2 - 1 = 1\). Therefore \(1 \in S\)
+  \begin{figure}
+  [htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{1.png}
+\caption*{}
+\label{fig:1}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\textwidth]{2.png}
+\caption*{For 1 disk, \(2^1-1 = 1\)}
+\label{fig:2}
+\end{figure}
+\newpage
+ \item Assume \(n \in S\) and that for a puzzle with \(n\) disks, it will take \(2^n-1\) 
+ moves to complete the puzzle.\\
+ To show \(n+1 \in S\), a puzzle with \(n+1\) disks can be solved in \(2^{n+1}-1\)
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{6.png}
+\label{fig:6}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{3.png}
+\caption*{It takes \(2^n-1\) disks to move the top \(n\) disks to the center}
+\label{fig:3}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{4.png}
+\caption*{It takes an additional move to place the \({(n+1)}^{\text{nd}}\) disk to the rightmost rod}
+\label{fig:4}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.0\textwidth]{5.png}
+\caption*{It will take another \(2^n-1\) moves to place \(n\) disks from the center rod to the rightmost rod}
+\label{fig:5}
+\end{figure}
+\\The total number of moves to complete the puzzle:\\
+\(2^{n}-1+1+2^{n}-1 = 2^{n+1} - 1\) and therefore if \(n \in S\), then \(n+1 \in 
+S\).
+\item By {(i)} and {(ii)} and PMI, we proved that \(1 \in S\) and that if \(n \in 
+S\), then \(n+1 \in S\) and therefore we proved with \(n\) disks, the Towers of Hanoi puzzle can be solved in \(2^n-1\) 
+moves..
+\end{enumerate}
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{4}
+\section*{\S 2.5 Exercise \arabic{ProblemCounter}: Fibonacci problem:}
+\setcounter{SubsectionCounter}{1}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Show that at \(n\) months, there are \(f_n\) pairs of rabbits.
+\begin{theorem1}
+ At \(n\) months, there are \(f_n\) pairs of rabbits.
+\begin{proof}
+Assume Fibonacci's rabbits are in fact the killer Rabbits of Caerbannog from 
+\textit{Monty Python and the Holy Grail} and that they never die naturally (as only the Holy Hand Grenade of Antioch may kill them). Despite being 
+apex predators of ultimate death, it takes one month for these rabbits to get their 
+mojo working and another month to produce offspring. The offspring will always be one pair, a male and a female. Help us all!\\
+As we start with one pair, the population in first two months will thankfully be limited 
+to one pair of the beasts. After month three, however, an additional pair will emerge from the Cave of Caerbannog. As these deadly creatures 
+are only spawned from parent rabbits alive in the prior two months, \({n-2}\), and 
+the population from the prior month \(n-1\) are unfortunately still alive. So
+the total population of killer Rabbits of Caerbannog in any month \(n\) is the prior population of rabbits plus the new rabbits of the month, or \(f_n = 
+f_{n-1}+f_{n_2}\). Bring out your dead!
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{4}
+\section*{\S 2.5 Exercise \arabic{ProblemCounter}: Fibonacci problem:}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Calculate the first ten Fibonacci numbers \(f_1,f_2,f_3,\ldots,f_{10}\).
+\begin{theorem1}
+ The first ten Fibonacci numbers are found by calculating according to the definition of the Fibonacci 
+ sequence:\\
+\(f_n = f_{n-1} + f_{n-2}\), with the seed values of \(f_1 = 1\) and \(f_2 = 
+1\)\\
+\begin{alignat*}{7}
+& & & & & & f_1 &= 1\\
+& & & & & & f_2 &= 2\\
+f_3 &= f_{3-1} &+ f_{3-2} &= f_{2} &+ f_{1} &= 1 &+ 1 &= 2\\
+f_4 &= f_{4-1} &+ f_{4-2} &= f_{3} &+ f_{2} &= 2 &+ 1 &= 3\\
+f_5 &= f_{5-1} &+ f_{5-2} &= f_{4} &+ f_{3} &= 3 &+ 2 &= 5\\
+f_6 &= f_{6-1} &+ f_{6-2} &= f_{5} &+ f_{4} &= 5 &+ 3 &= 8\\
+f_7 &= f_{7-1} &+ f_{7-2} &= f_{6} &+ f_{5} &= 8 &+ 5 &= 13\\
+f_8 &= f_{8-1} &+ f_{8-2} &= f_{7} &+ f_{6} &= 13 &+ 8 &= 21\\
+f_9 &= f_{9-1} &+ f_{9-2} &= f_{8} &+ f_{7} &= 21 &+ 13 &= 34\\
+f_{10} &= f_{10-1} &+ f_{10-2} &= f_{9} &+ f_{8} &= 34 &+ 21 &= 55\\
+\end{alignat*}
+Therefore the set of the first ten Fibonacci numbers is \{1,1,2,3,5,8,13,21,34,55\}
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{4}
+\section*{\S 2.5 Exercise \arabic{ProblemCounter}: Fibonacci problem:}
+\setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+Find a formula for \(f_{n+3}-f_{n+1}\).
+\begin{theorem1}
+ A formula for \(f_{n+3}-f_{n+1}\) is found by:
+ \begin{proof}
+The Fibonacci sequence is defined \(f_n = f_{n-1} + f_{n-2}\), with the seed values of \(f_1 = 1\) and \(f_2 = 
+1\).\\
+\begin{align*}
+  f_{n+3}-f_{n+1} &= {(f_{{(n-1)+3}}+f_{{(n-2)}+3})} - f_{n+1}\\
+  \ldots &= f_{n+2}+f_{n+1} - f_{n+1}\\
+  f_{n+3}-f_{n+1} &= f_{n+2}
+\end{align*}
+Therefore a formula for \(f_{n+3}-f_{n+1}\) is \(f_{n+2}\).
+\end{proof}  
+\end{theorem1}
+
+\newpage
+
+\setcounter{ProblemCounter}{6}
+\section*{\S 2.5 Exercise \arabic{ProblemCounter}: Use the PCI to prove the following properties of Fibonacci numbers:}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(f_{n+6}=4f_{n+3}+f_n\) for all natural numbers \(n\).
+\begin{theorem1}
+\(f_{n+6}=4f_{n+3}+f_n\) for all natural numbers \(n\).
+ \begin{proof}
+  The first terms of the Fibonacci series are \{1,1,2,3,5,8,13,21,34,\ldots\}\\
+  Let \(S = \{n \in \mathbb{N} | f_{n+6}=4f_{n+3}+f_{n}\}\)
+  \begin{enumerate}[(i)]
+    \item To show \(1 \in S\),
+    \begin{align*}
+      f_{1+6} &= 4f_{1+3}+f_{1}\\
+      f_{7} &= 4f_{4}+f_{1}\\
+      \text{Matching } f_n \text{ to corresponding}&\\
+      \text{elements of the Fibonacci sequence} \ldots&\\
+      13 &= 4(3) + 1\\
+      13&=13
+    \end{align*}
+    To show \(2 \in S\),
+    \begin{align*}
+      f_{2+6} &= 4f_{2+3}+f_{2}\\
+      f_{8} &= 4f_{5}+f_{2}\\
+      \text{Matching } f_n \text{ to corresponding}&\\
+      \text{elements of the Fibonacci sequence} \ldots&\\
+      21 &= 4(5) + 1\\
+      21&=21
+    \end{align*}
+    Therefore \(1 \in S\) and \(2 \in S\)
+    \newpage
+    \item To prove if \(n \in S\), assume that \(1, 2, 3, \ldots n-1 \in S\).\\
+    To compose \(f_{n+6}\), we use the definition of the Fibonacci sequence\\
+    \(f_{n+6} &= f_{n+5}+f_{n+4}\)\\
+    To compose \(f_{n+5}\), \(f_{{(n-1)}+6} &= 4f_{{(n-1)+3}}+f_{(n-1)} = 4f_{n+2}+f_{n-1}\)\\
+    To compose \(f_{n+4}\), \(f_{{(n-2)}+6} &= 4f_{{(n-2)+3}}+f_{(n-2)} = 4f_{n+1}+f_{n-2}\)\\
+    Therefore \(f_{n+6}=4f_{n+2}+f_{n-1}+4f_{n+1}+f_{n-2}\)\\
+    \(f_{n+6}=4{(f_{n+2}+f_{n+1})}+{(f_{n-2}+f_{n-1})}\)\\
+    \(f_{n+6}=4{(f_{n+3})}+{f_n}\)\\
+    \item This proves \(n \in S\) and by PCI it holds that \(f_{n+6}=4f_{n+3}+f_n\) for all \(n \in \mathbb{N}\)
+  \end{enumerate}
+\end{proof}  
+\end{theorem1}
+
+\newpage
+\end{document}

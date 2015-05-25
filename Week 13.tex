@@ -1,0 +1,253 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{setspace}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{pgfplots}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\PassOptionsToPackage{usenames,dvipsnames,svgnames}{xcolor}  
+\usepackage{tikz}
+\usepackage{cancel}
+\usetikzlibrary{arrows,positioning,automata,fit,shapes,calc,backgrounds}
+\usepackage{framed}
+\newcommand{\cupdot}{\mathbin{\mathaccent\cdot\cup}}\begin{document}
+\newtheorem*{theorem1}{Theorem}
+\newtheorem*{theorem2}{Theorem}
+\newtheorem*{theorem3}{Theorem}
+\newtheorem*{theorem4}{Theorem}
+\newtheorem*{theorem5}{Theorem}
+\newtheorem*{theorem6}{Theorem}
+\newtheorem*{theorem7}{Theorem}
+\newtheorem*{theorem8}{Theorem}
+\newtheorem*{theorem9}{True/False?}
+\title{MATH 393 Week 12 Assignment 2\textsuperscript{nd} Draft}\author{Brett Bonner}\date{April 20, 2014}\maketitle
+\doublespacing\newcounter{ProblemCounter}
+\newcounter{SubsectionCounter}[ProblemCounter]
+\setcounter{ProblemCounter}{2}
+\section*{\S 4.5 Exercise \arabic{ProblemCounter}: Let \(f{(x)}=x^{2} + 1\). Find:}
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=1.0\textwidth]{plot.png}
+\label{fig:plot}
+\end{figure}
+\setcounter{SubsectionCounter}{1}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(f{([1,3])}\) = \([2,10]\) because \({(1)}^2 + 1 = 2 \text{ and } {(3)}^2 + 1 = 10.\)\\
+\addtocounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(f^{-1}{([-1,1])} = \{0\}\) by inspection, because \(f{(x)}=1\) only at \(x=0\)\\
+\addtocounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\(f^{-1}{({(5,{10]}})} = {[-3,-2)} \cup {(2,3]}\) by inspection, as \(-3 \leq x < -2 \) and \(2 < x \leq 3\) where \(5 < y \leq 10 
+\).
+\newpage
+\setcounter{ProblemCounter}{7}
+\section*{\S 4.5 Exercise \arabic{ProblemCounter}: Prove parts {(b)} and {(d)} of Theorem 4.5.1}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  Let \(F:A \rightarrow B\), \(C\) and \(D\) be subsets of \(A\), then \(f{(C \cup D)}=f{(C)} \cup f{(D)}\)
+  \begin{proof}
+    \begin{align*}
+      &f{(C \cup D)}=f{(C)} \cup f{(D)}\\
+      &\Leftrightarrow f{(C \cup D)} \subseteq f{(C)} \cup f{(D)} \text{ and } f{(C)} \cup f{(D)} \subseteq f{(C \cup 
+      D)}\\
+      &\Leftrightarrow x \in C \cup D \text{ such that } f{(x)} = y\\
+      &\Leftrightarrow y \in f{(C \cup D)} \text{ and } {(x \in C \text{ or } x \in D)}\\
+      &\Leftrightarrow y \in f{(C)} \cup f{(D)}\\
+      &\Leftrightarrow y \in f{(C)} \text{ or } y \in f{(D)}\\
+    \end{align*}
+\end{proof}
+\end{theorem1}
+\newpage
+\setcounter{SubsectionCounter}{4}
+\noindent\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  Let \(F:A \rightarrow B\), \(C\) and \(D\) be subsets of \(A\), and \(E\) and \(F\) be subsets of \(B\), then \(f^{-1}{(E \cup F)} = f^{-1}{(E)} \cup f^{-1}{(F)}\)
+  \begin{proof}
+    \begin{align*}
+      &f^{-1}{(E \cup F)} = f^{-1}{(E)} \cup f^{-1}{(F)}\\
+      &\Leftrightarrow f^{-1}{(E \cup F)} \subseteq f^{-1}{(E)} \cup f^{-1}{(F)} \text{ and } f^{-1}{(E)} \cup f^{-1}{(F)} \subseteq f^{-1}{(E \cup 
+    F)}\\
+      &\Leftrightarrow x \in f^{-1}{(E \cup F)} \text{ and } x \in f^{-1}{(E)} \cup f^{-1}{(F)}\\
+      &\Leftrightarrow f{(x)} = y \text{ for some } y \in E \cup F\\
+      &\Leftrightarrow f{(x)} \in E \cup F\\
+      &\Leftrightarrow f{(x)} \in E \text{ or } f{(x)} \in F\\
+      &\Leftrightarrow x \in f^{-1}{(E)} \text{ or } x \in f^{-1}{(F)}
+    \end{align*}
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{1}
+\section*{\S 5.1 Exercise \arabic{ProblemCounter}: Prove Theorem 5.1.1. That is, show that the relation \(\approx\) is reflexive, symmetric, and transitive on the class of all sets.}
+\setcounter{SubsectionCounter}{2}
+\begin{theorem1}
+  The equivalence of sets is an equivalence relation on the class of all sets.
+  \begin{proof}
+    \begin{enumerate}[(i)]
+      \item \(\approx\) is reflexive.\\
+      Let \(A\) be a set.\\
+      We show there exists a function \(f:A \xrightarrow[onto]{1-1} A\).\\
+      Let \(f:A \rightarrow A\) be given by \(f{(x)}=x\).\\
+      \(f{(x)}=x\) is one-to-one, because \(f{(x)}=f{(y)} \text{ yields } x = y\).\\
+      \(f\) is onto \(A\), because for every \(x \in A, f{(x)}=x\).\\
+      Therefore, \(A \approx A\).\\
+      Since we let \(A\) be a set, we showed that the relation \(\approx\) is 
+      reflexive.
+      \item \(\approx\) is symmetric.\\
+      Let \(A\), \(B\) be sets. We want to show if \(A \approx B\) then \(B \approx 
+      A\).\\
+      Let \(A \approx B\). Then \(f:A \xrightarrow[onto]{1-1} B\).\\
+      By Corollary 4.4.3, since \(f\) is bijection, \(f^{-1}\) is bijection.\\
+      Then let \(f^{-1}\) be \(g:B \xrightarrow[onto]{1-1}A\).\\
+      Therefore \(B \approx A\).\\
+      Since we let \(A\) and \(B\) be sets, we showed if \(A \approx B\) then \(B \approx 
+      A\) and therefore the relation \(\approx\) is symmetric.
+      \newpage
+      \item \(\approx\) is transitive.\\
+      Let \(A\), \(B\), and \(C\) be sets.\\
+      We want to show if \(A \approx B\) and \(B \approx C\), then \(A \approx 
+      C\).\\
+      Assume \(A \approx B\) and \(B \approx C\).\\
+      Since \(A \approx B\), \(f:A \xrightarrow[1-1]{onto} B\).\\
+      Since \(B \approx C\), \(g:B \xrightarrow[1-1]{onto} C\).\\
+      Then \(g \circ f:A \xrightarrow[1-1]{onto} C \) by Theorem 4.4.1.\\
+      Therefore if \(A \approx B\) and \(B \approx C\), then \(A \approx C\).\\
+      Thus, the relation \(\approx\) is transitive.
+    \end{enumerate}
+    \noindent By {(i)}, {(ii)}, and {(iii)} we showed that the equivalence of sets is an equivalence relation on the class of all sets. That is, the relation \(\approx\) is 
+    reflexive, symmetrix, and transitive on the class of all sets.
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{4}
+\section*{\S 5.1 Exercise \arabic{ProblemCounter}: Complete the proof of Lemma 5.1.2{(b)} by showing that if \(h:A \rightarrow C\) and \(g:B \rightarrow D\) are one-to-one correspondences, the \(f:A \times B \rightarrow C \times D\) given by \(f{(a,b)} = {(h{(a)},g{(b)})}\) is a one-to-one correspondence.}
+\setcounter{SubsectionCounter}{2}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+  Suppose \(A,B,C,\) and \(D\) are sets with \(A \approx C\) and \(B \approx 
+  D\). \(A \times B \approx C \times D\).
+  \begin{proof}
+    Let \(f:A \times B \rightarrow C \times D\) be given by \(f{(a,b)} = 
+    {(h{(a)},g{(b)})}\), where \(h:A \xrightarrow[onto]{1-1} C\) and \(g:B \xrightarrow[onto]{1-1} 
+    D\) from Lemma 5.1.2{(a)}.
+    \begin{enumerate}[(i)]
+      \item Show \(f: A \times B \xrightarrow{onto} C \times D\).\\
+      Let \({(c,d)} \in C \times D\) be arbitrary.\\
+      Since \(h:A \xrightarrow[onto]{1-1} C\), there exists \(a \in A\) such 
+      that \(h{(a)} = c\).\\
+      Since \(g:B \xrightarrow[onto]{1-1} D\), there exists \(b \in B\) such 
+      that \(g{(b)} = d\).\\
+      Thus \({(c,d)}={(h{(a)},g{(b)})}\).\\
+      Then there exists an \({(a,b)} \in {(A \times B)}\) such that \(f{(a,b)} = 
+      {(c,d)}\).\\
+      Since we showed for all arbitrary \({(c,d)} \in C \times D\) that there exists 
+      \({(a,b)} \in {(A \times B)}\) such that \(f{(a,b)} = {(c,d)}\), \\
+      then we conclude \(f:A \times B \xrightarrow{onto} C \times D\).
+      \newpage
+      \item Show \(f: A \times B \xrightarrow{1-1} C \times D\).
+      Let \(f{(x,y)} = f{(m,n)}\).\\
+      Then \(f{(x,y)} = {(h{(x)},g{(y)})} = {(h{(m)}, g{(n)}}) = f{(m,n)}\).\\
+      Then \(h{(x)}=h{(m)}\) and \(g{(y)} = g{(n)}\).\\
+      Since \(h:A \xrightarrow[onto]{1-1} C\) and \(g:B \xrightarrow[onto]{1-1} 
+    D\), then \(x=m\) and \(y=m\).\\
+    Then \({(x,y)}={(m,n)}\).\\
+    Thus \(f: A \times B \xrightarrow{1-1} C \times D\).
+    \end{enumerate}
+    From {(i)} and {(ii)}, we have shown \(f:A \times B \xrightarrow[onto]{1-1} C \times D\).\\ 
+    Thus proving \(A \times B \approx C \times D\).
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{7}
+\section*{\S 5.1 Exercise \arabic{ProblemCounter}: Using the methods of this section, prove that if \(A\) and \(B\) are finite sets, then \( \overline{\overline{A \cup B}} = \overline{\overline{A}} + \overline{\overline{B}} - \overline{\overline{A \cap B}}\). This fact is a restatement of Theorem 2.6.1}
+\begin{theorem1}
+if \(A\) and \(B\) are finite sets, then \( \overline{\overline{A \cup B}} = \overline{\overline{A}} + \overline{\overline{B}} - \overline{\overline{A \cap B}}\).
+  \begin{proof}
+Suppose \(A\) and \(B\) are finite sets.\\
+We want to show \( \overline{\overline{A \cup B}} = \overline{\overline{A}} + \overline{\overline{B}} - \overline{\overline{A \cap 
+B}}\).\\
+Recall 5.1.7a: If \(A\), \(B\) are finite and disjoint, then \(\overline{\overline{A \cup B}} = \overline{\overline{A}} + 
+\overline{\overline{B}}\).\\
+We observe that \(B={(B - A)} \cup {(A \cap B)}\) and \({(B - A)} \cap {(A \cap B)} = 
+\varnothing\).\\
+So \(\overline{\overline{B}} = \overline{\overline{{(B -A)}}} + \overline{\overline{(A \cap 
+B)}}\).\\
+So \(\overline{\overline{B-A}}=\overline{\overline{B}} - \overline{\overline{A \cap 
+B}}\).\\
+\(A \cup B = A \cupdot {(B - A)}\).\\
+\(\overline{\overline{A \cup B}} = \overline{\overline{A}} + \overline{\overline{B-A}}.\)\\
+We therefore conclude if \(A\) and \(B\) are finite sets, \(\overline{\overline{A \cup B}} = \overline{\overline{A}} + \overline{\overline{B}} - \overline{\overline{A \cap 
+B}}.\)\\
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{8}
+\section*{\S 5.1 Exercise \arabic{ProblemCounter}: Prove part {(c)} of Theorem 5.1.7}
+\setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+If \(A_{1},A_{2},\ldots,A_{n}\) are finite sets, then \(\bigcup\limits_{i=1}^{n}A_{i}\) 
+is finite.
+  \begin{proof}
+  Let \(A_{1},A_{2},\ldots,A_{n},A_{n+1}\) be finite sets for some \(n \in 
+  \mathbb{N}\).\\
+  Let \(S = \{n \in \mathbb{N}: \bigcup\limits_{i=1}^{n}A_{i} \text{ is 
+    finite}\}\).
+    \begin{enumerate}[(i)]
+      \item Base case: show \(\bigcup\limits_{i=1}^{n}A_{i}\) is finite for 
+      \(n=1\).\\
+      \(\bigcup\limits_{i=1}^{1}A_{i} = A_1\).\\
+      By our hypothesis, \(A_{1}\) is finite.\\
+      Therefore \(1 \in S\).
+      \item Inductive Hypothesis: for all \(n \in \mathbb{N}\), if \(n \in S\), 
+      then \(n+1 \in S\).\\
+      Assume \(n \in \mathbb{N}\) and \(n \in S\), that is assume \(\bigcup\limits_{i=1}^{n}A_{i}\) 
+      is finite.\\
+      We want to show \(\bigcup\limits_{i=1}^{n+1}A_{i}\) is finite.\\
+      Let \(A_{1},A_{2},\ldots,A_{n},A_{n+1}\) be finite sets.\\
+      \(\bigcup\limits_{i=1}^{n+1}A_{i} = \bigcup\limits_{i=1}^{n}A_{i} \cup 
+      A_{n+1}\).\\
+      Since \(A_{n+1}\) is finite and \(\bigcup\limits_{i=1}^{n}A_{i}\) is 
+      finite, by Theorem 5.1.7b, \(\bigcup\limits_{i=1}^{n}A_{i} \cup 
+      A_{n+1}\) is finite.\\
+      Therefore \(\bigcup\limits_{i=1}^{n+1}A_{i}\) is finite.
+      \item We showed by PMI that if \(A_{1},A_{2},\ldots,A_{n}\) are finite sets for some \(n \in 
+      \mathbb{N}\), then \(\bigcup\limits_{i=1}^{n}A_{i}\) 
+is finite.
+    \end{enumerate}
+  \end{proof}
+\end{theorem1}
+\newpage
+\setcounter{ProblemCounter}{13}
+\section*{\S 5.1 Exercise \arabic{ProblemCounter}: Prove that if \(r > 1\) and \(x \in \mathbb{N}_{r}\), then \(\mathbb{N}_{r}-\{x\} \approx \mathbb{N}_{r-1}\) (Lemma 5.1.8)}
+\setcounter{SubsectionCounter}{3}
+\textbf{\arabic{ProblemCounter}.\alph{SubsectionCounter}}
+\begin{theorem1}
+Prove that if \(r > 1\) and \(x \in \mathbb{N}_{r}\), then \(\mathbb{N}_{r}-\{x\} \approx \mathbb{N}_{r-1}\)
+  \begin{proof}
+  Let \(r > 1\) be a natural number and let some \(x \in \mathbb{N}_r\).
+  \begin{enumerate}[(i)]
+    \item Case 1: \(x = r\)\\
+    Then \(\mathbb{N}_r - \{x\} = \mathbb{N}_{r-1}\), and clearly \(\mathbb{N}_{r-1} \approx \mathbb{N}_{r-1}\)
+    \item Case 2: \(x < r\)\\
+    Let \(A = \mathbb{N}_{x-1}\) and \(B = \mathbb{N}_{x-1}\).\\
+    Let \(C = \{x+1,x+2,\ldots r\}\) and \(D = \{x, x+1, \ldots r-1\}\).\\
+    Let \(n \in \mathbb{N}\) be arbitrary.\\
+    Let \(h: A \rightarrow B\) be given by 
+    \(h{(n)}=n\).\\
+    Let \(g: B \rightarrow C\) be given by 
+    \(g{(n)}=n-1\).\\
+    \(h: A \xrightarrow[onto]{1-1} B\) and \(g: C \xrightarrow[onto]{1-1} D\).\\ 
+    Since \(A \cap C = \varnothing\), by Theorem 4.3.5, \(h \cup g\) is a function and onto \(B \cup D\).\\
+    \(B \cup D = \varnothing\), so \(h \cup g\) is one-to-one.\\
+    Then \(h \cup g: N_{r} - \{x\} \xrightarrow[onto]{1-1} \mathbb{N}_{r-1}\).\\
+    Therefore \(\mathbb{N}_{r} - \{x\} \approx \mathbb{N}_{r-1}\).
+  \end{enumerate}
+  We showed that if \(r > 1\) and \(x \in \mathbb{N}_r\), then \(\mathbb{N}_{r} - \{x\} \approx 
+  \mathbb{N}_{r-1}\).
+  \end{proof}
+\end{theorem1}
+\end{document}
